@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>선행연구 → 척도 → 설문문항 → 연구모형</title>
+<style>
+:root{--navy:#1f3a5f;--gold:#b8860b;--green:#2f6b4f;--red:#9c3028;
+  --bg:#f7f8fa;--card:#fff;--ink:#1f2328;--mute:#6a737d;--line:#e1e6ec;--soft:#f0f3f7;}
+@media (prefers-color-scheme:dark){:root{--navy:#8ab4e8;--gold:#e0b050;--green:#6fbf8f;--red:#e08880;
+  --bg:#15181d;--card:#1e222a;--ink:#e6eaf0;--mute:#98a2b0;--line:#2f3641;--soft:#252b34;}}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+  font-size:15px;line-height:1.78;word-break:keep-all;-webkit-text-size-adjust:100%;}
+.wrap{max-width:780px;margin:0 auto;padding:0 16px 60px;}
+header{background:#1f3a5f;color:#fff;padding:32px 16px 28px;margin-bottom:22px;}
+@media (prefers-color-scheme:dark){header{background:#1a2b42;}}
+header .in{max-width:780px;margin:0 auto;}
+header .k{font-size:11px;letter-spacing:.2em;color:#d4b878;font-weight:700;margin-bottom:9px;}
+header h1{font-size:22px;font-weight:800;margin:0 0 10px;line-height:1.45;color:#fff;}
+header p{font-size:13.5px;color:#c3d2e4;margin:0;line-height:1.7;}
+.src-box{background:var(--card);border:2px solid var(--navy);border-radius:12px;padding:0;margin-bottom:24px;overflow:hidden;}
+.src-box .hd{background:var(--navy);color:#fff;padding:11px 16px;font-size:12px;font-weight:800;letter-spacing:.08em;}
+.src-box .bd{padding:15px 17px;font-size:13.5px;line-height:1.75;color:var(--mute);}
+.src-box .bd b{color:var(--ink);}
+.src-box details{margin-top:10px;}
+.src-box summary{cursor:pointer;font-weight:700;color:var(--navy);font-size:13px;}
+.src-box pre{white-space:pre-wrap;font-family:inherit;font-size:12.5px;line-height:1.75;background:var(--soft);padding:12px 14px;border-radius:8px;margin:10px 0 0;color:var(--ink);}
+nav{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:13px 15px;margin-bottom:24px;font-size:13.5px;line-height:2.05;}
+nav a{color:var(--navy);text-decoration:none;font-weight:700;margin-right:13px;}
+h2{font-size:18px;font-weight:800;color:var(--navy);margin:40px 0 6px;padding-bottom:9px;border-bottom:2px solid var(--navy);line-height:1.4;}
+h2 .step{display:block;font-size:11px;letter-spacing:.15em;color:var(--gold);margin-bottom:5px;}
+h3{font-size:15.5px;font-weight:800;margin:26px 0 9px;line-height:1.5;}
+h4{font-size:14px;font-weight:800;margin:18px 0 7px;color:#33475e;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px;}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0;}
+th{background:var(--soft);text-align:left;padding:9px;border-top:1.5px solid var(--navy);border-bottom:1px solid var(--line);font-weight:700;font-size:12.5px;}
+td{padding:9px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.6;}
+.A{color:var(--green);font-weight:800;}
+.B{color:var(--gold);font-weight:800;}
+.C{color:var(--red);font-weight:800;}
+.ok{background:#eef5ef;border-left:3px solid var(--green);border-radius:0 8px 8px 0;padding:14px 16px;margin:14px 0;line-height:1.78;}
+@media (prefers-color-scheme:dark){.ok{background:#1e3328;}}
+.ok .t{font-weight:800;color:var(--green);display:block;margin-bottom:5px;}
+.bad{background:#fdeeed;border-left:3px solid var(--red);border-radius:0 8px 8px 0;padding:14px 16px;margin:14px 0;line-height:1.78;}
+@media (prefers-color-scheme:dark){.bad{background:#2d1e1c;}}
+.bad .t{font-weight:800;color:var(--red);display:block;margin-bottom:5px;}
+.warn{background:#fdf6e8;border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:14px 16px;margin:14px 0;line-height:1.78;}
+@media (prefers-color-scheme:dark){.warn{background:#2b2418;}}
+.warn .t{font-weight:800;color:var(--gold);display:block;margin-bottom:5px;}
+blockquote{margin:12px 0;padding:12px 15px;background:var(--soft);border-left:3px solid var(--navy);border-radius:0 8px 8px 0;font-size:13.5px;line-height:1.78;}
+.flow{text-align:center;font-weight:800;color:var(--navy);background:var(--soft);padding:14px;border-radius:10px;margin:14px 0;line-height:1.9;font-size:14.5px;}
+.item{border-left:3px solid var(--line);padding-left:13px;margin:12px 0;}
+.item .o{font-size:13px;color:var(--mute);}
+.item .n{font-size:14px;font-weight:700;margin-top:5px;}
+.small{font-size:12.5px;color:var(--mute);}
+.docs{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:14px;}
+.docs a{display:block;padding:14px 16px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);}
+.docs a:last-child{border-bottom:none;}
+.docs .dt{font-size:11.5px;color:var(--mute);font-weight:700;margin-bottom:3px;}
+.docs .tt{font-size:14.5px;font-weight:800;color:var(--navy);line-height:1.45;}
+.docs .ds{font-size:12.5px;color:var(--mute);margin-top:4px;line-height:1.6;}
+footer{text-align:center;font-size:12.5px;color:var(--mute);padding:26px 16px;line-height:2;}
+</style>
+</head>
+<body>
+
+<header><div class="in">
+  <div class="k">2026년 9월 18일 · STEP 1~6</div>
+  <h1>선행연구 → 척도 →<br>설문문항 → 연구모형</h1>
+  <p>지영이 프롬프트 지시서에 따라 작성했어.<br>기존 14편 분류부터 최종 설문 구성안까지.</p>
+</div></header>
+
+<div class="wrap">
+
+<div class="src-box">
+  <div class="hd">이 문서는 어떤 질문에서 나왔나</div>
+  <div class="bd">
+    <b>지영이 프롬프트 지시서</b> (2026년 9월 18일)<br>
+    핵심 요구 — "내가 원하는 건 논문 숫자를 많이 모으는 게 아니라, 최종적으로 지도교수님께 보여드릴 수 있는 <b>'선행연구 → 척도 → 설문문항 → 연구모형'의 연결 구조</b>를 만드는 것이다."
+    <details>
+      <summary>지시서 원문 펼쳐보기</summary>
+      <pre>1. 현재 확정된 연구 방향
+AI 검색환경 → 연구의 환경·맥락
+독립: 디지털 마케팅 자기효능감 / 매개: 플랫폼 활용행동 / 종속: 마케팅 성과
+연구대상은 미용사업자
+
+2. 가장 먼저 해줬으면 하는 작업
+기존 선행연구를 A(반드시 유지) / B(이론적 배경만) / C(제외)로 분류. 제외 이유를 논문별로 명확하게
+
+3. 특히 중요하게 판단할 것
+변수의 위치가 바뀌었다는 이유만으로 폐기 판단하지 말 것.
+판단 기준은 '구성개념(construct)이 동일한가', 해당 척도가 측정하려는 개념을 측정하는가.
+Bandura 자기효능감 이론을 효능감 → 행동의 근거로 쓸 수 있는지 별도 검토
+
+4. 추가 선행연구를 실제 논문으로 찾아줘
+① 디지털 마케팅 자기효능감 ② 플랫폼 활용행동 ③ 마케팅 성과
+단순히 self-efficacy가 들어간 논문을 다 가져오지 말고 디지털 마케팅 활동과 실제로 연결되는 척도를 우선
+
+5. 논문을 찾을 때 가장 중요한 조건
+제목·초록만 가져오지 말고 실제 측정척도와 설문문항을 확인할 수 있는 논문 우선.
+논문명/저자·연도/변수/하위요인/문항 수/척도/원척도 출처/실제 문항/활용 가능성/활용 방법/DOI를 정리.
+설문문항을 확인할 수 없는 논문은 별도 표시
+
+6. 저작권 때문에 원문 그대로 많이 복사하지 말고
+원문 문항의 의미 → 한국어 의미 → 미용사업자용 수정안으로 연결
+
+7. 최종 설문구성 제안
+A 자기효능감 / B 플랫폼 활용행동 / C 마케팅 성과 각각 몇 문항, 어떤 선행연구 기반, 하위요인 구성
+
+8. 최종 결과물 순서
+STEP 1 기존 선행연구 전체 분류
+STEP 2 부족한 선행연구 파악
+STEP 3 추가 선행연구 검색
+STEP 4 척도 비교 — 구성개념·연구대상·측정내용 기준
+STEP 5 최종 설문문항 구성안
+STEP 6 연구모형과 설문문항의 논리적 연결 검토
+
+주의 — "변수명이 비슷하다"는 이유만으로 척도를 가져오지 말 것.
+척도 수정 시 논리적 근거, 타당도·신뢰도 검증 방식까지 검토</pre>
+    </details>
+  </div>
+</div>
+
+<nav>
+  <a href="#s1">STEP 1 분류</a><a href="#s2">STEP 2 공백</a><a href="#s3">STEP 3 추가 검색</a>
+  <a href="#s4">STEP 4 척도 비교</a><a href="#s5">STEP 5 설문 구성안</a><a href="#s6">STEP 6 연결 검토</a>
+  <a href="#docs">문서 목록</a>
+</nav>
+
+<div class="flow">디지털 마케팅 자기효능감<br>↓<br>플랫폼 활용행동<br>↓<br>마케팅 성과<br><span class="small" style="font-weight:400">AI 검색환경 = 연구의 환경·맥락 (변수 아님)</span></div>
+
+<div class="warn"><span class="t">먼저 — 이 문서의 한계</span>
+· <b>원문 전문을 읽은 논문은 6편</b>이야(드라이브 PDF). 나머지는 KCI 초록이나 2차 자료로 확인했고, 그건 표에 표시했어.<br>
+· STEP 3의 추가 논문은 <b>KCI 초록 수준까지만</b> 확인했어. 실제 문항은 지영이가 원문을 받아 확인해야 해.<br>
+· 저작권 때문에 원문 문항을 길게 옮기지 않았어. 지시서 6번대로 <b>의미 → 수정안</b> 형태로 정리했어.</div>
+
+<!-- STEP 1 -->
+<h2 id="s1"><span class="step">STEP 1</span>기존 선행연구 14편 분류</h2>
+
+<div class="ok"><span class="t">분류 기준 — 지시서 3번을 그대로 적용</span>
+변수의 <b>위치</b>가 아니라 <b>구성개념(construct)이 동일한가</b>로 판단했어. 어떤 논문에서 A가 독립변수였는데 우리 연구에서 매개변수가 되었다는 이유만으로는 제외하지 않았어.</div>
+
+<h3 class="A">A · 반드시 유지 — 5편</h3>
+
+<table>
+  <tr><th style="width:150px">논문</th><th style="width:90px">연결되는 변수</th><th>유지 근거</th></tr>
+  <tr>
+    <td><b>Wang, Tseng, Wang, &amp; Chu (2020)</b><br>IESES<br><span class="small">Internet Research 30(2)</span></td>
+    <td>독립<br>자기효능감</td>
+    <td><b>측정척도 직결.</b> 구성개념이 "온라인에서 사업을 성공적으로 수행할 수 있다는 믿음"으로 우리 독립변수와 동일. 16문항 3요인, α=.94. 원문 16문항 전체를 페루 번안 논문(Frontiers 9:1370490, TABLE 1, p.5)에서 확보</td>
+  </tr>
+  <tr>
+    <td><b>신강선·지성구 (2023)</b><br><span class="small">경영컨설팅연구 23(6), 45-56</span></td>
+    <td>종속<br>마케팅 성과</td>
+    <td><b>측정척도 직결.</b> 디지털 마케팅 성과 4문항(표2, p.49), CR=0.87, AVE=0.64. 국내 소상인 200명에게 이미 검증. 서비스업 23% 포함, 매출 1억8천만원 미만 67%로 <b>연구대상 유사성도 높음</b></td>
+  </tr>
+  <tr>
+    <td><b>박윤미·오윤경 (2020)</b><br><span class="small">한국인체미용예술학회지 21(4)</span></td>
+    <td>연구대상<br>통제변수</td>
+    <td><b>문항은 없지만 유지.</b> 1인 미용기업 정의(p.149)를 그대로 인용하고, 연령별 마케팅 역량 차이(30대 4.06 / 50대 이상 3.45, pp.152-153)가 <b>연령을 통제변수로 넣는 근거</b></td>
+  </tr>
+  <tr>
+    <td><b>안용길 (2026)</b><br><span class="small">벤처창업연구 21(2), 123-134</span></td>
+    <td>매개<br>영역 구분</td>
+    <td><b>연구공백 + 매개변수 영역 구성.</b> 플레이스 서비스 영역(검색 노출·지도·리뷰·예약)이 플랫폼 활용행동 문항의 차원 근거. 한계 절(p.132)의 "업종별 의존 구조 미반영"이 우리 연구의 자리</td>
+  </tr>
+  <tr>
+    <td><b>Bandura (1997)</b><br><span class="small">Self-efficacy: The exercise of control</span></td>
+    <td>이론<br>전체 모형</td>
+    <td><b>모형 전체의 이론적 근거.</b> 아래 별도 검토</td>
+  </tr>
+</table>
+
+<div class="card">
+  <h4 style="margin-top:0">Bandura 이론을 효능감 → 행동의 근거로 쓸 수 있는가 <span class="small">— 지시서 3번 별도 요구</span></h4>
+  <p style="margin:0 0 10px"><b>쓸 수 있어. 오히려 이게 이론의 주 경로야.</b></p>
+  <table style="margin:0 0 10px">
+    <tr><th style="width:96px">경로</th><th>이론에서의 위치</th></tr>
+    <tr><td>효능감 → 행동</td><td><b>주 경로.</b> Bandura가 자기효능감 개념을 제시한 목적 자체가 행동을 예측하기 위한 것. 효능감이 과업 선택, 노력의 양, 어려움 앞에서의 지속을 결정한다고 봄</td></tr>
+    <tr><td>행동 → 효능감</td><td><b>숙달경험(mastery experience).</b> 효능감의 네 가지 원천 중 가장 강력한 것. 해보고 성공하면 효능감이 올라감</td></tr>
+  </table>
+  <p style="margin:0"><b>양방향이 다 이론 안에 있어.</b> 그래서 교수님이 "반두라의 자기효능감은 성공적 결과로 인한 효능감이 높아질 수 있다는 이론이므로 인과관계가 어색"이라고 하신 건, <b>효능감을 매개 자리에 놓으면</b> 숙달경험 경로와 충돌한다는 뜻이야. 효능감을 독립변수로 두면 주 경로라 충돌이 없어.</p>
+</div>
+
+<h3 class="B">B · 이론적 배경만 활용 — 5편</h3>
+<p class="small">변수 간 관계나 배경 설명에는 유용하지만, 측정척도로는 직접 쓸 수 없는 논문.</p>
+
+<table>
+  <tr><th style="width:150px">논문</th><th style="width:96px">활용 지점</th><th>척도로 쓸 수 없는 이유</th></tr>
+  <tr>
+    <td><b>김도현 (2025)</b><br><span class="small">한국콘텐츠학회논문지 25(4)</span></td>
+    <td>통제변수<br>배경</td>
+    <td>구성개념이 <b>소비자의 AI 신뢰</b>야. 사업자의 효능감·행동과 다른 개념. 다만 "AI를 계속 쓸수록 신뢰가 높아진다"(β=.414, 표4 p.45)가 <b>AI 검색 인지를 통제변수로 넣는 근거</b>. 15문항 전체는 확보했지만 우리 변수에 대응하지 않아</td>
+  </tr>
+  <tr>
+    <td><b>류수빈·양은진 (2024)</b><br><span class="small">미용예술경영연구 18(6)</span></td>
+    <td>배경</td>
+    <td>미용서비스의 <b>경험재 특성</b>(pp.3-4)이 서론의 문제 제기 근거. 그런데 응답자가 <b>소비자</b>고 측정 대상이 SNS 정보특성이라 사업자 변수와 구성개념이 다름</td>
+  </tr>
+  <tr>
+    <td><b>류수빈·양은진 (2023)</b><br><span class="small">한국미용학회지 29(4)</span></td>
+    <td>연구공백</td>
+    <td>결론(p.860)의 "플랫폼·콘텐츠별 세분화 연구 필요"가 <b>플레이스를 특정하는 근거</b>. 척도는 소비자 대상이라 사용 불가</td>
+  </tr>
+  <tr>
+    <td><b>이민영·박진현 (2024)</b><br><span class="small">패션비즈니스 28(5)</span></td>
+    <td>배경</td>
+    <td>유용성이 구매의도에 비유의(β=0.003)한 결과와 <b>정보 과부하 해석</b>(p.91)이 AI 요약의 의미를 설명하는 데 유용. 척도는 소비자 대상</td>
+  </tr>
+  <tr>
+    <td><b>Aggarwal 외 (2024)</b><br>GEO<br><span class="small">KDD 2024</span></td>
+    <td>배경</td>
+    <td>생성형 검색 최적화를 <b>컴퓨터 실험</b>으로 검증. 설문 척도가 아니고 응답자가 없음. AI 검색환경이 실재한다는 근거로만</td>
+  </tr>
+</table>
+
+<h3 class="C">C · 제외 — 4편</h3>
+<p class="small">지시서 2번 요구대로 제외 이유를 논문별로 적었어. "키워드가 비슷하다"가 아니라 구성개념·연구대상·모형 기여도로 판단했어.</p>
+
+<table>
+  <tr><th style="width:150px">논문</th><th>제외 이유</th></tr>
+  <tr>
+    <td><b>김헌준·서영욱 (2026)</b><br>AI 도서 추천 다차원 신뢰<br><span class="small">산업진흥연구 11(2)</span></td>
+    <td><b>구성개념 불일치.</b> 측정한 것은 AI 추천에 대한 소비자 신뢰(역량·호의·정직성 3차원)로, 우리 세 변수 어느 것과도 대응하지 않아. 연구대상도 온라인 서점 이용자. 저자들도 다른 맥락으로의 일반화에 신중해야 한다고 밝힘(p.248). <b>주제 2로 갔다면 핵심이었지만 주제 1에서는 자리가 없어</b></td>
+  </tr>
+  <tr>
+    <td><b>박성열·윤홍희 (2023)</b><br>학점은행제 미용학과 학습만족도<br><span class="small">농업교육과 인적자원개발 55(2)</span></td>
+    <td><b>독립·종속변수가 완전히 다름.</b> 학습전이기대 → 학습동기 → 학습만족도 구조. 연구대상은 학생. 교육 맥락이라 사업자의 마케팅 행동과 연결점이 없어. <b>주제 3의 핵심 논문</b>이었어</td>
+  </tr>
+  <tr>
+    <td><b>윤홍희·리순화 (2021)</b><br>과정평가형 기술 전문성·인성<br><span class="small">학습자중심교과교육연구 21(23)</span></td>
+    <td><b>맥락 불일치.</b> 기술 전문성·인성 → 교육만족도. 미용업 대상이지만 측정한 것이 <b>시술 기술 숙련도</b>라 디지털 마케팅과 무관. 척도 활용 불가</td>
+  </tr>
+  <tr>
+    <td><b>류진선 외 (2024)</b> 루브릭 실험<br><b>이상원·이종숙 (2025)</b> 연구동향<br><b>이상원 외 (2022)</b>, <b>이상원·정재형 (2023)</b> 교육과정<br><span class="small">대한미용학회지·한국인체미용예술학회지</span></td>
+    <td><b>연구 유형 자체가 다름.</b> 실험설계 1편, 문헌 동향 1편, 교육과정 고찰 2편. 설문 척도가 없거나 교육과정 분석이라 우리 모형 설명에 실질적 도움이 없어</td>
+  </tr>
+</table>
+
+<div class="card">
+  <h4 style="margin-top:0">분류 요약</h4>
+  <table style="margin:0">
+    <tr><th style="width:80px">구분</th><th style="width:60px">편수</th><th>성격</th></tr>
+    <tr><td class="A">A 유지</td><td>5</td><td>척도 직결 2편 + 정의·통제 1편 + 공백 근거 1편 + 이론 1편</td></tr>
+    <tr><td class="B">B 배경만</td><td>5</td><td>소비자 대상 미용 연구 3편 + AI 관련 2편</td></tr>
+    <tr><td class="C">C 제외</td><td>7</td><td>주제 2·3용 논문. 버리는 게 아니라 <b>보관</b>해 — 다른 주제로 가면 다시 살아나</td></tr>
+  </table>
+</div>
+
+<!-- STEP 2 -->
+<h2 id="s2"><span class="step">STEP 2</span>지금 부족한 것</h2>
+
+<table>
+  <tr><th style="width:130px">변수</th><th style="width:96px">척도 상태</th><th>진단</th></tr>
+  <tr>
+    <td>① 디지털 마케팅<br>자기효능감</td>
+    <td class="A">확보</td>
+    <td>IESES 16문항 전체를 확보했고 신뢰도도 확인됨. <b>다만 국내 번안본이 없어서</b> 직접 번안해야 해. 그리고 미용샵 맥락에 안 맞는 문항이 절반이야</td>
+  </tr>
+  <tr>
+    <td>② 플랫폼 활용행동</td>
+    <td class="C">공백</td>
+    <td><b>여기가 가장 큰 문제야.</b> 사업자가 플랫폼을 어떻게 활용하는지를 측정한 <b>검증된 척도를 국내외에서 찾지 못했어.</b> 교수님이 "핵심 변수는 검증된 척도를 우선"이라고 하셨는데, 이 변수는 우선할 척도가 없는 상태</td>
+  </tr>
+  <tr>
+    <td>③ 마케팅 성과</td>
+    <td class="A">확보</td>
+    <td>신강선·지성구(2023) 4문항. 국내 소상인 검증. <b>다만 4문항 모두 "주요 경쟁업체와 비교한"으로 시작</b>해서 1인샵에 적용할 때 비교 기준 문제가 있어</td>
+  </tr>
+</table>
+
+<div class="bad"><span class="t">②가 이 연구의 최대 난관이야</span>
+교수님 지시는 <b>"독립변수를 학생이 재구성한 지표로 사용할 수 없다"</b>였어. 그런데 매개변수인 플랫폼 활용행동은 쓸 수 있는 검증 척도가 없어.<br><br>
+교수님이 대안 매개변수로 <b>고객참여, 고객반응, 디지털마케팅 역량</b>을 제시하신 것도 이 문제를 이미 보셨기 때문일 가능성이 커. 그중 <b>디지털마케팅 역량은 신강선·지성구(2023)에 검증된 척도가 이미 있어.</b><br><br>
+STEP 4에서 이 선택을 다룰게.</div>
+
+<!-- STEP 3 -->
+<h2 id="s3"><span class="step">STEP 3</span>추가 선행연구 검색 결과</h2>
+
+<div class="warn"><span class="t">검색 범위와 한계</span>
+KCI, 구글 스콜라, ScienceDirect, ResearchGate를 지시서 4번의 키워드로 검색했어. <b>아래 논문들은 KCI 초록이나 검색 스니펫까지만 확인한 것이고, 실제 문항은 원문을 받아야 확인돼.</b> 문항 확인 가능 여부를 표에 표시했어.</div>
+
+<h3>① 디지털 마케팅 자기효능감</h3>
+
+<table>
+  <tr><th style="width:26mm">항목</th><th>Wang, Tseng, Wang, &amp; Chu (2020) — IESES <span class="A">채택</span></th></tr>
+  <tr><td>논문명</td><td>Development and validation of an internet entrepreneurial self-efficacy scale</td></tr>
+  <tr><td>출처</td><td><i>Internet Research</i>, 30(2), 653-675 · DOI 10.1108/INTR-07-2018-0294</td></tr>
+  <tr><td>변수</td><td>인터넷 창업 자기효능감 — 온라인에서 사업을 성공적으로 수행할 수 있다는 믿음</td></tr>
+  <tr><td>하위요인</td><td>리더십(1~5) / 기술 활용(6~9) / 인터넷 마케팅·전자상거래(10~16)</td></tr>
+  <tr><td>문항 수</td><td>16문항 (초기 38문항 → EFA 반복 후 확정)</td></tr>
+  <tr><td>척도</td><td>7점 리커트</td></tr>
+  <tr><td>원척도 출처</td><td><b>이 논문이 개발한 척도.</b> Bandura 이론 기반</td></tr>
+  <tr><td>신뢰도</td><td>전체 α=.94 / 요인별 .87·.92·.95 · 총분산설명력 69.37%</td></tr>
+  <tr><td>실제 문항</td><td class="A">확인 완료 — 페루 번안 논문 TABLE 1(p.5)에 16문항 전체 수록</td></tr>
+  <tr><td>활용 가능성</td><td class="A">높음</td></tr>
+  <tr><td>활용 방법</td><td>요인 2·3에서 선별 + 표현 수정. 요인 1(리더십) 전체 제외</td></tr>
+  <tr><td>DOI/URL</td><td>번안본 무료 — frontiersin.org · 10.3389/feduc.2024.1370490</td></tr>
+</table>
+
+<h4>번안 선례 2편 — 척도 수정의 근거로 씀</h4>
+<table>
+  <tr><th style="width:150px">논문</th><th>우리 연구에 주는 것</th></tr>
+  <tr><td><b>Torres-Miranda 외 (2024)</b><br>페루·스페인어 번안<br><span class="small">Frontiers in Education 9:1370490</span></td>
+    <td>원문 16문항 전체 수록. 번역자 6명 → 전문가 6명 내용타당도(Aiken's V) → 743명 본조사. <b>6번 문항을 "컴퓨터 파일 관리"에서 "SNS·디지털 매체로 사업 운영"으로 크게 수정</b> — 맥락 수정의 국제 학술지 선례. 전체 α=.96</td></tr>
+  <tr><td><b>Balgiu 외 (2024)</b><br>루마니아어 번안<br><span class="small">PLOS ONE 19(10):e0312929</span></td>
+    <td>원저자 동의 → 번역 2명 → 역번역 2명 → 예비검사 16명 → 644명. 전체 α=.916. <b>관세 문항(16번) 평균 3.594로 최저</b>, 네트워크 연결 최약 — 해당 문항을 빼는 데이터 근거</td></tr>
+</table>
+
+<div class="ok"><span class="t">국내 번안본은 없어</span>
+KCI·구글 스콜라에서 "인터넷 창업 자기효능감 / 디지털 자기효능감 / 온라인 창업 자기효능감 / IESES" 등으로 검색했지만 못 찾았어. 확인된 국내 자기효능감 척도는 <b>이영광·지은구(2017) 일반 자기효능감 12문항</b>과 <b>이정애(2013) 단축형 직업적 자기효능감</b>인데, 둘 다 디지털·마케팅 맥락이 없어서 쓸 수 없어.<br><br>
+<b>RISS 학위논문은 아직 확인 못 했어.</b> 지영이가 봐줘야 해 — 있으면 번안 작업이 사라져.</div>
+
+<h3>② 플랫폼 활용행동 — 후보가 부족해</h3>
+
+<div class="bad"><span class="t">검색 결과를 솔직히 말할게</span>
+지시서 4번의 키워드(platform usage / utilization / social media marketing usage / digital marketing implementation behavior)로 검색했는데, <b>사업자 관점에서 플랫폼 활용행동을 측정한 검증 척도를 찾지 못했어.</b><br><br>
+나온 것들은 대부분 이랬어.<br>
+· <b>소비자 지각 척도</b> — Yadav &amp; Rahman(2017) 15문항, Khan &amp; Jan(2019) 22문항. 소비자가 기업의 SNS 마케팅을 어떻게 지각하는지를 잼<br>
+· <b>SNS 중독·사용시간 척도</b> — SMD, SMUS 등. 개인 사용 빈도<br>
+· <b>기업 SNS 평가 지표</b> — AHP 기반 정량·정성 지표. 계정 평가용이고 설문 척도가 아님<br>
+· <b>사례연구</b> — "소규모 비즈니스 SNS활용의 효과"(소상공인 컨설팅 사례). 척도 없음</td>
+</div>
+
+<table>
+  <tr><th style="width:26mm">항목</th><th>Laradi 외 (2023) — SMM capabilities <span class="B">후보</span></th></tr>
+  <tr><td>변수</td><td>소셜미디어 마케팅 역량 (SMM capabilities) — <b>기업·사업자 관점</b></td></tr>
+  <tr><td>문항 수</td><td>12문항</td></tr>
+  <tr><td>척도</td><td>7점 리커트</td></tr>
+  <tr><td>확인 경로</td><td><i>Journal of Open Innovation</i> 계열 후속 논문(ScienceDirect, 2024)에서 인용된 것으로 확인</td></tr>
+  <tr><td>실제 문항</td><td class="C">미확인 — 원 논문을 받아야 함</td></tr>
+  <tr><td>활용 가능성</td><td class="B">보통 — 사업자 관점이라는 점은 맞지만 "역량"이라 행동과 구성개념이 다를 수 있음</td></tr>
+  <tr><td>다음 할 일</td><td>원문 확보해서 문항이 <b>능력 인식</b>인지 <b>실행 빈도</b>인지 확인. 능력 인식이면 자기효능감과 겹쳐서 못 씀</td></tr>
+</table>
+
+<table>
+  <tr><th style="width:26mm">항목</th><th>신강선·지성구 (2023) 디지털 마케팅 역량 <span class="B">대안</span></th></tr>
+  <tr><td>변수</td><td>디지털 마케팅 역량</td></tr>
+  <tr><td>문항 수</td><td>4문항 중 <b>CFA에서 1개 제외, 최종 3문항</b> (p.50)</td></tr>
+  <tr><td>척도</td><td>5점 리커트</td></tr>
+  <tr><td>원척도 출처</td><td>Yam 외 (2011)</td></tr>
+  <tr><td>신뢰도</td><td>CR=0.81, AVE=0.59</td></tr>
+  <tr><td>실제 문항</td><td class="A">확인 완료 — 표2(p.49). 고객 관계 유지 / 효율적 사업장 운영 / 다양한 서비스 제공</td></tr>
+  <tr><td>활용 가능성</td><td class="B">보통 — 이미 손에 있고 국내 소상인 검증됨. 다만 <b>3문항은 매개변수로 너무 적고</b>, "역량"이라 행동이 아님</td></tr>
+</table>
+
+<h3>③ 마케팅 성과</h3>
+
+<table>
+  <tr><th style="width:26mm">항목</th><th>신강선·지성구 (2023) 디지털 마케팅 성과 <span class="A">채택</span></th></tr>
+  <tr><td>변수</td><td>디지털 마케팅 성과 — 경쟁사 대비 시장 효율성</td></tr>
+  <tr><td>문항 수</td><td>4문항 단일차원</td></tr>
+  <tr><td>척도</td><td>5점 리커트</td></tr>
+  <tr><td>원척도 출처</td><td>Vorhies &amp; Morgan (2005), <i>Journal of Marketing</i> 69(1) — "디지털 마케팅 활용 후 획득한 시장 효율성" 4문항</td></tr>
+  <tr><td>신뢰도</td><td>CR=0.87, AVE=0.64 · 표준요인적재량 .76~.83</td></tr>
+  <tr><td>실제 문항</td><td class="A">확인 완료 — 표2(p.49). 시장 점유율 / 판매 수익 성장 / 신규 고객 확보 / 기존 고객 매출 증대, <b>모두 "주요 경쟁업체와 비교한"으로 시작</b></td></tr>
+  <tr><td>활용 가능성</td><td class="A">높음 — 국내 소상인 200명 검증, 서비스업 23% 포함, 매출 규모 유사</td></tr>
+  <tr><td>활용 방법</td><td>비교 기준 결정 후 표현만 수정</td></tr>
+</table>
+
+<h4>성과 척도 추가 후보</h4>
+<table>
+  <tr><th style="width:150px">논문</th><th>내용</th><th style="width:70px">문항 확인</th></tr>
+  <tr><td><b>Foltean 외 (2019)</b><br><span class="small">ScienceDirect 후속 논문에서 인용</span></td>
+    <td>기업 성과 4문항 — 비용, 시장점유율 성장, 매출 성장, 수익성 성장. 7점 리커트. <b>신강선·지성구와 구성이 거의 같아</b> 교차 근거로 쓸 수 있음</td>
+    <td class="C">미확인</td></tr>
+  <tr><td><b>소상공기업 마케팅 역량 → 네트워크 역량 → 마케팅 성과</b><br><span class="small">KCI, 전국 496개 기업, 2019.9, AMOS</span></td>
+    <td><b>구조가 우리 모형과 가장 유사해.</b> 역량 → 중간변수 → 마케팅 성과. 성과를 매출액 증가·자금흐름 개선·고객 증가·재구매 4요인으로 측정 — 미용샵에 적용하기 쉬운 구성</td>
+    <td class="C">미확인<br><span class="small">저자·학술지 확정 필요</span></td></tr>
+</table>
+
+<h4>매개 논리를 지지하는 국내 연구 3편 <span class="small">— 지시서 4번의 "부족한 부분 보완"</span></h4>
+<table>
+  <tr><th style="width:150px">논문</th><th>우리 모형에 주는 것</th></tr>
+  <tr><td><b>긍정심리자본 → 혁신행동 → 직무성과</b><br><span class="small">KCI ART002519736 · 금융·공기업·IT 서비스</span></td>
+    <td><b>구조가 지금 모형과 거의 같아.</b> 자기효능감을 포함한 심리자본이 <b>행동을 매개로</b> 성과에 영향. "심리 → 행동 → 성과" 매개 논리의 직접 근거</td></tr>
+  <tr><td><b>자기효능감 → 직무태도 → 생산성</b><br><span class="small">KCI ART002119249</span></td>
+    <td>효능감을 <b>독립변수</b>로 둔 매개 구조. 순서를 방어할 때 쓸 수 있어</td></tr>
+  <tr><td><b>고객참여·고객시민행동 → 자기효능감 → 소비생활 만족</b><br><span class="small">KCI ART003042960 · 자영업·경영자 655부</span></td>
+    <td>교수님이 대안으로 언급한 <b>"고객참여"가 등장</b>. 단 효능감을 매개로 둔 구조라 <b>반례로 읽어야 해</b> — "이런 연구도 있으나 교수님 지적대로 인과가 어색"</td></tr>
+</table>
+
+<!-- STEP 4 -->
+<h2 id="s4"><span class="step">STEP 4</span>척도 비교 — 무엇을 쓸 것인가</h2>
+
+<div class="ok"><span class="t">비교 기준 — 지시서 4번 요구</span>
+"좋다"가 아니라 <b>구성개념 / 연구대상 / 측정내용</b> 세 가지로 비교했어.</div>
+
+<h3>① 자기효능감 — IESES 확정</h3>
+<table>
+  <tr><th style="width:26mm">기준</th><th>IESES</th><th>이영광·지은구(2017)</th></tr>
+  <tr><td>구성개념</td><td class="A">온라인 사업 수행 효능감 — 우리 변수와 동일</td><td class="C">일반·사회적 효능감 — 다름</td></tr>
+  <tr><td>연구대상</td><td class="B">대만 창업자 — 사업자라는 점은 일치</td><td class="C">성인·청소년 일반</td></tr>
+  <tr><td>측정내용</td><td class="A">온라인 마케팅·기술 활용 과업별 확신</td><td class="C">긍정·부정·사회적 효능감</td></tr>
+</table>
+<p><b>IESES가 유일한 선택이야.</b> 대안이 구성개념부터 안 맞아.</p>
+
+<h3>② 플랫폼 활용행동 — 세 가지 길</h3>
+<table>
+  <tr><th style="width:44px">안</th><th style="width:130px">무엇을</th><th>평가</th></tr>
+  <tr>
+    <td><b>A</b></td>
+    <td>플랫폼 활용행동<br>직접 구성</td>
+    <td><b>구성개념 일치도 최고, 척도 근거 최약.</b> AI 대응 행동을 담을 수 있는 유일한 안이고 연구의 차별점이 여기 있어. 그런데 교수님의 "검증된 척도 우선" 지시와 정면으로 부딪혀.<br>
+    <span class="small">쓰려면 — 형성적 지표임을 명시하고 내용타당도(전문가 3~5명) + 예비조사로 검증. 논문에는 "안용길(2026)의 서비스 영역 구분과 네이버 공식 가이드를 바탕으로 연구자가 구성"이라고 정직하게 씀</span></td>
+  </tr>
+  <tr>
+    <td><b>B</b></td>
+    <td>디지털 마케팅 역량<br>(신강선·지성구)</td>
+    <td><b>척도 근거 최강, 구성개념 어긋남.</b> 검증된 척도가 이미 손에 있고 국내 소상인 대상이야. 그런데 <b>"역량"은 능력 인식이라 자기효능감과 구성개념이 겹쳐</b>. 독립변수가 효능감인데 매개가 역량이면 "둘이 같은 거 아니냐"가 나와. 그리고 3문항은 매개변수로 너무 적어</td>
+  </tr>
+  <tr>
+    <td><b>C</b></td>
+    <td>Laradi 외(2023)<br>SMM capabilities</td>
+    <td><b>판단 보류 — 원문을 봐야 해.</b> 사업자 관점 12문항이라 수는 적절해. 문항이 <b>실행 빈도</b>를 묻는다면 A안의 대안이 되고, <b>능력 인식</b>이면 B안과 같은 문제가 생겨</td>
+  </tr>
+</table>
+
+<div class="warn"><span class="t">루크 판단 — A안 + 조건</span>
+B안은 구성개념 중복 때문에 위험해. 독립변수와 매개변수가 둘 다 "능력 인식"이면 모형 자체가 흔들려.<br><br>
+<b>A안으로 가되, 교수님께 이렇게 여쭙는 게 맞아.</b><br>
+"매개변수인 플랫폼 활용행동은 검증된 척도를 찾지 못했습니다. 안용길(2026)의 서비스 영역과 네이버 공식 가이드를 바탕으로 구성하고 내용타당도·예비조사로 검증하려 하는데, 이 방식이 괜찮을지 여쭙고 싶습니다. 대안으로 말씀해주신 디지털마케팅 역량은 독립변수인 자기효능감과 구성개념이 겹칠 것 같아 망설여집니다."<br><br>
+<b>그리고 Laradi 외(2023) 원문을 받아보는 게 우선이야.</b> C안이 되면 A안의 약점이 사라져.</div>
+
+<h3>③ 마케팅 성과 — 비교 기준만 결정</h3>
+<table>
+  <tr><th style="width:26mm">기준</th><th>신강선·지성구(2023)</th></tr>
+  <tr><td>구성개념</td><td class="A">경쟁사 대비 마케팅 성과 인식 — 우리 변수와 동일</td></tr>
+  <tr><td>연구대상</td><td class="A">국내 소상인 200명, 서비스업 23%, 매출 1억8천만원 미만 67% — <b>가장 유사</b></td></tr>
+  <tr><td>측정내용</td><td class="A">시장 점유율·수익·신규 고객·기존 고객 매출</td></tr>
+</table>
+<p>세 기준 모두 통과. 남은 결정은 <b>"주요 경쟁업체와 비교한"을 유지할지</b>뿐이야. 1인샵 사장님이 경쟁업체를 어떻게 잡을지가 모호해서, 원척도 유지 / 시점 비교로 수정 / 둘 다 측정 중에 골라야 해.</p>
+
+<!-- STEP 5 -->
+<h2 id="s5"><span class="step">STEP 5</span>최종 설문문항 구성안</h2>
+
+<div class="ok"><span class="t">전체 구성 — 총 39문항</span>
+자기효능감 8 + 플랫폼 활용행동 12 + 마케팅 성과 4 + 인구통계·통제 9 + 조작점검 2 · 예상 응답시간 8~11분</div>
+
+<h3>A · 디지털 마케팅 자기효능감 — 8문항, 2요인</h3>
+<table>
+  <tr><th style="width:26mm">항목</th><th>내용</th></tr>
+  <tr><td>기반 척도</td><td>Wang 외(2020) IESES 요인 2·3에서 선별</td></tr>
+  <tr><td>문항 수</td><td><b>8문항</b> (기술 활용 3 + 마케팅 실행 5)</td></tr>
+  <tr><td>왜 8문항</td><td>원척도 16문항 중 리더십 5문항 제외 → 11문항. 여기서 미용샵과 무관한 3문항(하드웨어 설치·쇼핑몰 제작·원가 분석) 추가 제외 → 8문항. <b>선별만 하고 새로 만들지 않아서 "IESES를 썼다"고 말할 수 있어</b></td></tr>
+  <tr><td>척도</td><td>5점 리커트 <span class="small">— 종속변수가 5점이라 통일. 원척도는 7점이므로 논문에 수정 사실 명시</span></td></tr>
+  <tr><td>하위요인</td><td>플랫폼 운영 효능감 3문항 / 마케팅 실행 효능감 5문항<br><span class="small">원척도 요인 2·3을 그대로 계승. 요인명만 맥락에 맞게 조정</span></td></tr>
+</table>
+
+<h4>원문 의미 → 미용사업자용 수정안 <span class="small">— 지시서 6번 형식</span></h4>
+
+<p class="small"><b>요인 1 · 플랫폼 운영 효능감</b> (IESES 요인 2 기반)</p>
+<div class="item">
+  <div class="o">원문 8번 의미 — 사업에 멀티미디어 장비를 활용할 수 있다</div>
+  <div class="n">SE1 · 나는 우리 샵의 시술 사진과 영상을 직접 촬영하고 정리해 올릴 수 있다</div>
+</div>
+<div class="item">
+  <div class="o">원문 9번 의미 — 웹사이트 응용 프로그램을 설치하고 사용할 수 있다</div>
+  <div class="n">SE2 · 나는 네이버 스마트플레이스의 기능을 우리 샵에 맞게 설정하고 사용할 수 있다</div>
+</div>
+<div class="item">
+  <div class="o">원문 6번 의미 — 사업에 필요한 정보를 기본적으로 관리할 수 있다<br><span class="small">페루 번안본은 이 문항을 "SNS·디지털 매체로 사업을 운영할 수 있다"로 수정함</span></div>
+  <div class="n">SE3 · 나는 온라인에 올린 우리 샵 정보를 최신 상태로 관리할 수 있다</div>
+</div>
+
+<p class="small" style="margin-top:14px"><b>요인 2 · 마케팅 실행 효능감</b> (IESES 요인 3 기반)</p>
+<div class="item">
+  <div class="o">원문 10번 의미 — 혁신적인 인터넷 마케팅 전략을 세울 수 있다</div>
+  <div class="n">SE4 · 나는 우리 샵에 맞는 온라인 홍보 방법을 스스로 판단해 정할 수 있다</div>
+</div>
+<div class="item">
+  <div class="o">원문 12번 의미 — 전자상점의 가격 전략을 수립할 수 있다</div>
+  <div class="n">SE5 · 나는 우리 샵의 시술 메뉴와 가격을 온라인에서 효과적으로 제시할 수 있다</div>
+</div>
+<div class="item">
+  <div class="o">원문 14번 의미 — 수익성 있는 전자상거래 비즈니스 모델을 제안할 수 있다</div>
+  <div class="n">SE6 · 나는 온라인에 올린 내용이 실제 예약으로 이어지도록 만들 수 있다</div>
+</div>
+<div class="item">
+  <div class="o">원문 15번 의미 — 전자상점 운영에 필요한 자원을 확보할 수 있다</div>
+  <div class="n">SE7 · 나는 온라인 운영에 필요한 정보나 도움을 스스로 찾아 구할 수 있다</div>
+</div>
+<div class="item">
+  <div class="o">원문 요인 3 종합 — 온라인에서 고객을 확보할 수 있다는 확신<br><span class="small">미용업 특성을 반영한 추가 문항. 논문에 "연구자 추가"로 명시</span></div>
+  <div class="n">SE8 · 나는 고객이 우리 샵에 대한 후기를 남기도록 유도할 수 있다</div>
+</div>
+
+<div class="warn"><span class="t">SE8에 대해</span>
+이 문항만 원척도에 대응하는 항목이 없어. 미용업에서 리뷰가 결정적이라 넣었는데, <b>엄밀히는 연구자 추가 문항이야.</b> 두 가지 선택이 있어.<br>
+· <b>넣는다</b> → 논문에 "연구자가 미용업 특성을 반영해 추가한 1문항"이라고 명시하고, CFA에서 요인적재량을 확인<br>
+· <b>뺀다</b> → 7문항이 되고 "전부 IESES에서 선별"이라고 깔끔하게 말할 수 있어<br><br>
+<b>교수님 지시("표현만 최소한으로 수정")를 엄격히 따르면 빼는 게 맞아.</b> 여쭤보고 결정하자.</div>
+
+<h3>B · 플랫폼 활용행동 — 12문항, 4차원</h3>
+<table>
+  <tr><th style="width:26mm">항목</th><th>내용</th></tr>
+  <tr><td>기반</td><td>안용길(2026) 플레이스 서비스 영역(표2, p.129) + 네이버 스마트플레이스 공식 가이드<br><span class="small">검증된 척도가 없어 연구자 구성. STEP 4 참조</span></td></tr>
+  <tr><td>문항 수</td><td><b>12문항</b> (기본 운영 8 + AI 대응 4)</td></tr>
+  <tr><td>척도</td><td>5점 빈도 (전혀 하지 않는다 ~ 항상 한다)</td></tr>
+  <tr><td>지표 성격</td><td><b>형성적 지표.</b> 각 항목이 모여 개념을 만들므로 요인분석·α가 적합하지 않음. <b>내용타당도</b>로 검증</td></tr>
+  <tr><td>차원</td><td>지시서 4번②의 차원 제안을 안용길(2026) 서비스 영역에 대응시켜 4개로 정리</td></tr>
+</table>
+
+<table>
+  <tr><th style="width:96px">차원</th><th style="width:60px">문항</th><th>내용 요약</th><th style="width:86px">안용길 대응</th></tr>
+  <tr><td>정보 관리</td><td>PB1~3</td><td>영업시간·연락처 최신 유지 / 시술 메뉴·가격 게시 / 위치·찾아오는 길 보완</td><td>검색 노출<br>지도·길찾기</td></tr>
+  <tr><td>콘텐츠 활용</td><td>PB4~5</td><td>시술 사진 주기적 갱신 / 소식·이벤트 게시</td><td>검색 노출</td></tr>
+  <tr><td>고객 관계</td><td>PB6~7</td><td>리뷰 답글 작성 / 리뷰 작성 유도</td><td>리뷰 노출</td></tr>
+  <tr><td>예약 관리</td><td>PB8</td><td>예약 기능 운영·관리</td><td>온라인 예약</td></tr>
+  <tr><td><b>AI 대응</b></td><td>PB9~12</td><td>소개글을 문장 형태로 작성 / 어떤 고객에게 어떤 시술이 맞는지 설명하는 글 게시 / 자주 묻는 질문을 글로 정리 / 검색 결과에 어떻게 나오는지 직접 확인</td><td>검색 노출<br><span class="small">AI 환경 반영</span></td></tr>
+</table>
+
+<div class="ok"><span class="t">AI 대응 4문항이 연구의 차별점이야</span>
+AI 검색환경을 변수로 쓰지 않기로 했지만, <b>이 4문항을 통해 환경 변화가 측정 도구 안에 남아.</b> 네 문항 모두 "AI가 텍스트를 읽는다"는 전제 없이는 할 이유가 없는 행동이야. 사람이 읽기엔 오히려 길고 번거로운 일이지.<br><br>
+설문지에는 <b>"AI"라는 말을 쓰지 않아.</b> 사장님들이 네이버 AI 브리핑이라는 이름을 모르기 때문에, 문항에는 행동만 적고 설문 앞장에 화면 캡처로 설명해.</div>
+
+<h3>C · 마케팅 성과 — 4문항</h3>
+<table>
+  <tr><th style="width:26mm">항목</th><th>내용</th></tr>
+  <tr><td>기반 척도</td><td>신강선·지성구(2023) 표2, p.49 · 원출처 Vorhies &amp; Morgan(2005)</td></tr>
+  <tr><td>문항 수</td><td><b>4문항</b> — 원척도 그대로. 추가·삭제 없음</td></tr>
+  <tr><td>척도</td><td>5점 리커트 — 원척도와 동일</td></tr>
+</table>
+
+<h4>원문 의미 → 미용사업자용 수정안</h4>
+<div class="item">
+  <div class="o">원문 — 주요 경쟁업체와 비교한 신규 고객 확보</div>
+  <div class="n">MP1 · 주변 비슷한 샵들과 비교해 새로운 고객이 늘었다</div>
+</div>
+<div class="item">
+  <div class="o">원문 — 주요 경쟁업체와 비교한 판매 수익의 성장</div>
+  <div class="n">MP2 · 주변 비슷한 샵들과 비교해 매출이 늘었다</div>
+</div>
+<div class="item">
+  <div class="o">원문 — 주요 경쟁업체와 비교한 기존 고객에 대한 매출 증대</div>
+  <div class="n">MP3 · 주변 비슷한 샵들과 비교해 기존 고객의 재방문이 늘었다</div>
+</div>
+<div class="item">
+  <div class="o">원문 — 주요 경쟁업체와 비교한 시장 점유율 증가</div>
+  <div class="n">MP4 · 주변 비슷한 샵들과 비교해 우리 샵을 찾는 손님이 늘었다</div>
+</div>
+
+<div class="ok"><span class="t">비교 기준을 "주변 비슷한 샵들"로 살렸어</span>
+원척도의 <b>경쟁사 비교 구조를 유지</b>하면서 "주요 경쟁업체"라는 표현만 1인샵이 답할 수 있게 바꿨어. 이렇게 하면 "원척도를 그대로 썼다"고 말할 수 있고, 표현 수정 근거도 명확해.<br><br>
+루크가 앞서 제안한 "작년 이맘때와 비교해서"는 <b>구성개념이 바뀌는</b> 수정이었어. 시점 비교와 경쟁사 비교는 다른 것을 재니까. 이번 안이 교수님 지시에 더 맞아.</div>
+
+<h3>D · 인구통계·통제변수 — 9문항 + 조작점검 2문항</h3>
+<table>
+  <tr><th style="width:48px">번호</th><th>문항</th><th style="width:130px">근거</th></tr>
+  <tr><td>D1</td><td>성별</td><td>기본</td></tr>
+  <tr><td>D2</td><td>연령대</td><td>박윤미·오윤경(2020) — 30대 4.06 / 50대 이상 3.45</td></tr>
+  <tr><td>D3</td><td>주 업종 (헤어/메이크업/병행)</td><td>기본</td></tr>
+  <tr><td>D4</td><td>샵 운영 기간</td><td>박윤미·오윤경(2020) 인구통계</td></tr>
+  <tr><td>D5</td><td><b>함께 일하는 사람 유무</b></td><td><b>1인샵 선별 문항</b> — 박윤미·오윤경(2020, p.149) 정의</td></tr>
+  <tr><td>D6</td><td>플레이스 등록 기간</td><td>기본</td></tr>
+  <tr><td>D7</td><td>주당 온라인 홍보·관리 시간</td><td><span class="B">근거 미확보 — 기초 정보로만</span></td></tr>
+  <tr><td>D8</td><td>네이버 AI 요약 인지 수준</td><td>김도현(2025) — 지속이용 → 신뢰 β=.414</td></tr>
+  <tr><td>D9</td><td>플레이스 관련 교육·자료 접촉 경험</td><td>연구자 개입 효과 분리</td></tr>
+  <tr><td>M1~2</td><td>조작점검 2문항</td><td>불성실 응답 제거용</td></tr>
+</table>
+
+<!-- STEP 6 -->
+<h2 id="s6"><span class="step">STEP 6</span>연구모형과 설문문항의 연결 검토</h2>
+
+<table>
+  <tr><th style="width:110px">모형 위치</th><th style="width:70px">문항</th><th>구성개념 일치 여부</th></tr>
+  <tr>
+    <td>독립변수<br>자기효능감</td>
+    <td>SE1~8</td>
+    <td class="A">일치. 모든 문항이 <b>"~할 수 있다"</b>는 능력에 대한 믿음을 물음. 실제 실행 여부는 묻지 않음</td>
+  </tr>
+  <tr>
+    <td>매개변수<br>플랫폼 활용행동</td>
+    <td>PB1~12</td>
+    <td class="A">일치. 모든 문항이 <b>"~한다"</b>는 실제 실행 빈도를 물음. 능력을 묻지 않음</td>
+  </tr>
+  <tr>
+    <td>종속변수<br>마케팅 성과</td>
+    <td>MP1~4</td>
+    <td class="A">일치. 경쟁사 대비 성과 인식</td>
+  </tr>
+</table>
+
+<div class="ok"><span class="t">"할 수 있다"와 "한다"의 구분이 이 설문의 핵심이야</span>
+SE 문항과 PB 문항의 과업이 일부 겹치는 건 <b>정상이고 이론적으로 요구되는 것</b>이야. Bandura가 효능감을 특정 과업에 대해 물어야 한다고 했으니까. 다만 <b>어미가 달라야 해.</b><br><br>
+· SE — "직접 촬영하고 정리해 <b>올릴 수 있다</b>"<br>
+· PB — "시술 사진을 주기적으로 새로 <b>올린다</b>"<br><br>
+이 구분이 무너지면 두 변수가 같은 걸 재게 돼. 문항을 다듬을 때 <b>어미를 끝까지 지켜야 해.</b></div>
+
+<h3>가설과 문항의 대응</h3>
+<table>
+  <tr><th style="width:44px">가설</th><th style="width:170px">경로</th><th>검증에 쓰이는 문항</th></tr>
+  <tr><td>H1</td><td>자기효능감 → 플랫폼 활용행동</td><td>SE1~8 평균 → PB1~12 합산</td></tr>
+  <tr><td>H2</td><td>플랫폼 활용행동 → 마케팅 성과</td><td>PB1~12 합산 → MP1~4 평균</td></tr>
+  <tr><td>H3</td><td>자기효능감 → 마케팅 성과</td><td>SE1~8 평균 → MP1~4 평균 <span class="small">(직접효과 확인용)</span></td></tr>
+  <tr><td>H4</td><td>플랫폼 활용행동의 매개효과</td><td>PROCESS Model 4, 부트스트랩 5,000회</td></tr>
+</table>
+
+<h3>남은 방법론 과제 3개</h3>
+<table>
+  <tr><th style="width:40px">1</th><td><b>동일방법편의.</b> 세 변수를 같은 사람이 같은 설문에서 답해. Harman 단일요인 검증으로 점검하고 한계에 명시. 설문지에서 <b>SE 문항과 PB 문항을 멀리 떨어뜨려 배치</b>하고 사이에 인구통계 문항을 넣어</td></tr>
+  <tr><th>2</th><td><b>형성적 지표 검증.</b> PB는 요인분석·α가 맞지 않아. 미용업 실무자 3명 + 온라인 마케팅 실무자 2명에게 내용타당도 검토를 받고, 예비조사 20~30명으로 문항 이해도를 확인</td></tr>
+  <tr><th>3</th><td><b>표본 경로.</b> 교수님 지시대로 전자책 신청자를 빼고 미용사업자 커뮤니티·협회·오픈채팅·SNS로 다양화. 경로별 목표 인원을 미리 정하고 <b>경로를 응답 데이터에 기록</b>해서 경로 간 차이를 확인해</td></tr>
+</table>
+
+<h2>교수님께 여쭐 것 4개</h2>
+<table>
+  <tr><th style="width:40px">1</th><td><b>플랫폼 활용행동 척도.</b> 검증된 척도를 찾지 못해 연구자 구성 + 내용타당도 검증으로 가려는데 괜찮을지. 대안으로 말씀해주신 디지털마케팅 역량은 독립변수와 구성개념이 겹칠 것 같다는 점도 함께</td></tr>
+  <tr><th>2</th><td><b>SE8(리뷰 유도 문항).</b> 원척도에 대응 항목이 없는 연구자 추가 문항인데, 넣을지 뺄지</td></tr>
+  <tr><th>3</th><td><b>리커트 5점 통일.</b> IESES 원척도는 7점인데 종속변수가 5점이라 5점으로 통일하려는 것</td></tr>
+  <tr><th>4</th><td><b>제목.</b> 「…플랫폼 활용행동과 마케팅 성과에 미치는 영향」이 병렬로 읽혀서 「…마케팅 성과에 미치는 영향: 플랫폼 활용행동의 매개효과」로 다듬어도 될지</td></tr>
+</table>
+
+<h2 id="docs">문서 목록</h2>
+<div class="docs">
+  <a href="../"><div class="dt">2026. 09. 17</div><div class="tt">결정 보드</div>
+    <div class="ds">설문 문항 관련 선택지와 진행 체크리스트. 고르면 기기에 저장되고 결과를 복사해 카톡으로 보낼 수 있어</div></a>
+  <a href="../survey-items/"><div class="dt">2026. 09. 17</div><div class="tt">참고논문 설문 문항 모음</div>
+    <div class="ds">참고논문 5편의 측정 문항을 원문 그대로. 쪽수와 표 번호까지. IESES 16문항, 김도현(2025) 15문항 전체</div></a>
+  <a href="../answer/"><div class="dt">2026. 09. 17</div><div class="tt">두 가지 질문에 대한 답</div>
+    <div class="ds">변수 순서가 어디서 바뀌었나 / 논문을 다시 조사해야 하나 / 선행연구 문항 원칙</div></a>
+  <a href="../final/"><div class="dt">2026. 09. 18</div><div class="tt">교수님 자료 반영 최종 정리</div>
+    <div class="ds">교수님 자필 자료로 확정된 5가지, 제목 문제와 추천 제목, 모형 A·B·C 비교</div></a>
+  <a href="./" style="background:var(--soft)"><div class="dt">2026. 09. 18 · 지금 보는 문서</div><div class="tt">선행연구 → 척도 → 설문문항 → 연구모형</div>
+    <div class="ds">기존 14편 A/B/C 분류, 변수별 척도 공백 진단, 추가 선행연구, 척도 비교, 최종 설문 39문항 구성안, 모형-문항 연결 검토</div></a>
+</div>
+
+</div>
+
+<footer>지영 논문 · 황선희 교수님 지도<br>2026년 9월 18일</footer>
+
+</body>
+</html>
