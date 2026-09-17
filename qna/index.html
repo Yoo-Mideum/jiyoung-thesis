@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>지영이 질문에 대한 답 — 쉽게 풀어서</title>
+<style>
+:root{--navy:#1f3a5f;--gold:#b8860b;--green:#2f6b4f;--red:#9c3028;
+  --bg:#f7f8fa;--card:#fff;--ink:#1f2328;--mute:#6a737d;--faint:#a8b0b9;--line:#e1e6ec;--soft:#f0f3f7;}
+@media (prefers-color-scheme:dark){:root{--navy:#8ab4e8;--gold:#e0b050;--green:#6fbf8f;--red:#e08880;
+  --bg:#15181d;--card:#1e222a;--ink:#e6eaf0;--mute:#98a2b0;--faint:#5c646e;--line:#2f3641;--soft:#252b34;}}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+  font-size:15.5px;line-height:1.85;word-break:keep-all;-webkit-text-size-adjust:100%;}
+.wrap{max-width:740px;margin:0 auto;padding:0 16px 60px;}
+header{background:#1f3a5f;color:#fff;padding:32px 16px 28px;margin-bottom:24px;}
+@media (prefers-color-scheme:dark){header{background:#1a2b42;}}
+header .in{max-width:740px;margin:0 auto;}
+header .k{font-size:11px;letter-spacing:.2em;color:#d4b878;font-weight:700;margin-bottom:9px;}
+header h1{font-size:23px;font-weight:800;margin:0 0 10px;line-height:1.45;color:#fff;}
+header p{font-size:13.5px;color:#c3d2e4;margin:0;line-height:1.7;}
+.meta{font-size:11.5px;color:var(--faint);font-weight:600;letter-spacing:.03em;margin-bottom:7px;}
+.q{background:var(--card);border:2px solid var(--navy);border-radius:12px;padding:15px 17px;margin:34px 0 16px;}
+.q .num{display:inline-block;background:var(--navy);color:var(--card);font-size:11px;font-weight:800;border-radius:5px;padding:3px 9px;margin-bottom:8px;letter-spacing:.06em;}
+.q .tx{font-size:15px;line-height:1.75;font-weight:700;}
+h2{font-size:17.5px;font-weight:800;color:var(--navy);margin:40px 0 14px;padding-bottom:9px;border-bottom:2px solid var(--navy);line-height:1.4;}
+h3{font-size:15.5px;font-weight:800;margin:24px 0 9px;line-height:1.5;}
+.ez{background:#eef4f9;border-left:3px solid #4a7fb5;border-radius:0 9px 9px 0;padding:14px 16px;margin:14px 0;line-height:1.88;}
+@media (prefers-color-scheme:dark){.ez{background:#1c2733;}}
+.ez .t{font-weight:800;color:#2f5f8f;display:block;margin-bottom:5px;font-size:14px;}
+@media (prefers-color-scheme:dark){.ez .t{color:#8ab4e8;}}
+.ok{background:#eef5ef;border-left:3px solid var(--green);border-radius:0 9px 9px 0;padding:14px 16px;margin:14px 0;line-height:1.85;}
+@media (prefers-color-scheme:dark){.ok{background:#1e3328;}}
+.ok .t{font-weight:800;color:var(--green);display:block;margin-bottom:5px;}
+.bad{background:#fdeeed;border-left:3px solid var(--red);border-radius:0 9px 9px 0;padding:14px 16px;margin:14px 0;line-height:1.85;}
+@media (prefers-color-scheme:dark){.bad{background:#2d1e1c;}}
+.bad .t{font-weight:800;color:var(--red);display:block;margin-bottom:5px;}
+.warn{background:#fdf6e8;border-left:3px solid var(--gold);border-radius:0 9px 9px 0;padding:14px 16px;margin:14px 0;line-height:1.85;}
+@media (prefers-color-scheme:dark){.warn{background:#2b2418;}}
+.warn .t{font-weight:800;color:var(--gold);display:block;margin-bottom:5px;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:14px 0;}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:13px 0;}
+th{background:var(--soft);text-align:left;padding:9px;border-top:1.5px solid var(--navy);border-bottom:1px solid var(--line);font-weight:700;font-size:13px;}
+td{padding:10px 9px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.65;}
+.title-a{background:var(--soft);border-radius:9px;padding:13px 15px;margin:10px 0;font-size:14.5px;font-weight:700;line-height:1.65;}
+.title-a .lb{display:block;font-size:11.5px;color:var(--mute);font-weight:700;margin-bottom:5px;}
+.small{font-size:13px;color:var(--mute);}
+.docs{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:14px;}
+.docs a{display:block;padding:14px 16px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);}
+.docs a:last-child{border-bottom:none;}
+.docs .dt{font-size:11.5px;color:var(--faint);font-weight:700;margin-bottom:3px;}
+.docs .tt{font-size:14.5px;font-weight:800;color:var(--navy);line-height:1.45;}
+.docs .ds{font-size:12.5px;color:var(--mute);margin-top:4px;line-height:1.6;}
+footer{text-align:center;font-size:12.5px;color:var(--mute);padding:26px 16px;line-height:2;}
+</style>
+</head>
+<body>
+
+<header><div class="in">
+  <div class="k">질문 10개 · 쉽게 풀어서</div>
+  <h1>지영이가 이해한 게<br>맞는지 확인해줄게</h1>
+  <p>대부분 정확해. 특히 "통해로 바꾸면 되는 거지?"는<br>핵심을 정확히 짚은 질문이었어.</p>
+</div></header>
+
+<div class="wrap">
+
+<div class="meta">2026년 9월 18일 · 최종 정리 문서를 읽고 보낸 질문</div>
+
+<h2>먼저 — 지영이가 정리한 구조, 맞아</h2>
+<table>
+  <tr><th style="width:96px">자리</th><th>무엇</th><th style="width:60px">확인</th></tr>
+  <tr><td>배경·맥락</td><td>AI 검색환경</td><td class="small" style="color:var(--green);font-weight:800">맞음</td></tr>
+  <tr><td>독립변수</td><td>디지털 마케팅 자기효능감</td><td class="small" style="color:var(--green);font-weight:800">맞음</td></tr>
+  <tr><td>매개변수</td><td>플랫폼 활용행동</td><td class="small" style="color:var(--green);font-weight:800">맞음</td></tr>
+  <tr><td>종속변수</td><td>마케팅 성과</td><td class="small" style="color:var(--green);font-weight:800">맞음</td></tr>
+  <tr><td>제목</td><td>"AI 검색환경에서 ~" (변수로 안 들어감)</td><td class="small" style="color:var(--green);font-weight:800">맞음</td></tr>
+</table>
+<p>구조는 완전히 이해했어. 이제 질문 하나씩 볼게.</p>
+
+<!-- Q1 -->
+<div class="q">
+  <div class="meta">2026. 09. 18</div>
+  <div class="num">질문 1</div>
+  <div class="tx">AI 검색환경의 위치를 어디다 둘지가 중요한 것 같아. 이 부분은 어디다 둘지 추천해줘.</div>
+</div>
+
+<div class="ez"><span class="t">쉬운 설명 — 연극 무대로 생각해봐</span>
+AI 검색환경은 <b>무대 배경</b>이야. 배우가 아니라 뒤에 그려진 그림이지.<br><br>
+그런데 배경 그림은 <b>한 군데만 있는 게 아니야.</b> 무대 뒤에도 있고, 소품에도 그 시대 느낌이 묻어 있고, 프로그램 책자에도 "이 이야기는 조선시대입니다"라고 써 있지.<br><br>
+AI 검색환경도 똑같아. <b>논문 여러 군데에 조금씩 들어가.</b></div>
+
+<h3>다섯 군데에 넣는 걸 추천해</h3>
+<table>
+  <tr><th style="width:44px">순</th><th style="width:110px">어디에</th><th>어떻게</th></tr>
+  <tr><td>1</td><td><b>제목</b></td><td>"AI 검색환경에서 ~" — 맨 앞에 붙여. 이게 <b>변수가 아니라 배경</b>이라는 신호야</td></tr>
+  <tr><td>2</td><td><b>서론</b></td><td>"왜 지금 이 연구가 필요한가"의 근거. 네이버 AI 브리핑 출시, 연관검색어 종료 같은 사실을 여기 넣어</td></tr>
+  <tr><td>3</td><td><b>이론적 배경</b><br>독립된 절 하나</td><td>2장 안에 "AI 검색환경의 변화와 지역 소상공인" 같은 절을 하나 만들어. <b>여기가 가장 중요해</b> — 교수님이 선행연구를 찾으라고 한 자리야</td></tr>
+  <tr><td>4</td><td><b>측정 문항</b></td><td>플랫폼 활용행동 12문항 중 <b>AI 대응 4문항.</b> 배경이 실제 측정 도구 안에 들어가는 유일한 자리야</td></tr>
+  <tr><td>5</td><td><b>논의·결론</b></td><td>결과를 해석할 때 "AI 검색환경에서는 이런 의미가 있다"로 연결</td></tr>
+</table>
+
+<div class="ok"><span class="t">이렇게 하면 좋은 점</span>
+<b>"AI가 제목에만 있고 연구에는 없다"는 지적을 막을 수 있어.</b> 변수로 안 넣었는데도 다섯 군데에서 계속 나오니까, 읽는 사람이 "아 이 연구는 AI 시대를 다루는 연구구나"라고 받아들여.<br><br>
+특히 <b>4번(측정 문항)</b>이 결정적이야. 서론에만 있으면 "그냥 유행어 붙인 거 아니냐"가 되지만, 문항 안에 있으면 실제로 측정한 게 되니까.</div>
+
+<!-- Q2 -->
+<div class="q">
+  <div class="meta">2026. 09. 18</div>
+  <div class="num">질문 2</div>
+  <div class="tx">매개와 종속의 역할이 애매하다고 이해했어. A가 B로 인해 C가 되어야 하는데 A→B, A→C처럼 읽힌다는 거야? 근거 3에서 "와"라는 단어가 문제라면, "통해"로 바꾸기만 하면 문제가 안 되는 거지?</div>
+</div>
+
+<div class="ok"><span class="t">정확해. 그리고 "통해"로 바꾸면 해결돼</span>
+지영이가 핵심을 정확히 짚었어. 문제는 <b>변수가 아니라 제목의 단어 하나</b>였어.</div>
+
+<div class="ez"><span class="t">쉬운 설명 — 도미노와 두 갈래 길</span>
+<b>"통해"는 도미노야.</b><br>
+첫 번째를 밀면 → 두 번째가 넘어지고 → 세 번째가 넘어져. 순서가 하나야.<br><br>
+<b>"와"는 두 갈래 길이야.</b><br>
+"엄마가 형<b>과</b> 동생에게 용돈을 줬다" — 형에게도 주고 동생에게도 줬다는 뜻이지. 형을 통해서 동생에게 준 게 아니야.<br><br>
+그래서 "플랫폼 활용행동<b>과</b> 마케팅 성과에 미치는 영향"은 이렇게 읽혀.<br>
+· 자기효능감 → 플랫폼 활용행동<br>
+· 자기효능감 → 마케팅 성과<br><br>
+두 개를 따로따로 봤다는 뜻이 되는 거야.</div>
+
+<h3>그래서 두 제목은 같은 의미야</h3>
+<div class="title-a">
+  <span class="lb">안 1 · 콜론 형식</span>
+  AI 검색환경에서 미용사업자의 디지털 마케팅 자기효능감이 마케팅 성과에 미치는 영향<b>: 플랫폼 활용행동의 매개효과</b>
+</div>
+<div class="title-a">
+  <span class="lb">안 2 · "통해" 형식</span>
+  AI 검색환경에서 미용사업자의 디지털 마케팅 자기효능감이 <b>플랫폼 활용행동을 통해</b> 마케팅 성과에 미치는 영향
+</div>
+
+<div class="ok"><span class="t">둘 다 매개를 정확히 표현해. 둘 다 써도 돼</span>
+지영이 판단이 맞아. <b>병렬로 읽히지 않으면서 매개 구조를 정확히 보여주는 제목이 두 가지 있는 거야.</b><br><br>
+차이는 이 정도야.<br><br>
+<b>안 1 (콜론)</b> — 국내 학술지에서 훨씬 흔해. 검색할 때 "매개효과"라는 단어로 걸려. 콜론 앞이 짧아서 읽기 편해.<br><br>
+<b>안 2 ("통해")</b> — 한 문장으로 자연스럽게 읽혀. 연구문제 문장과 표현이 똑같아져서 일관돼 보여.<br><br>
+<b>그러니까 교수님 스타일에 맞추면 돼.</b> 교수님이 쓰신 논문들이 어느 형식인지 보고 그쪽으로 가는 게 제일 안전해. 둘 다 학술적으로 문제없어.</div>
+
+<!-- Q3 -->
+<div class="q">
+  <div class="meta">2026. 09. 18</div>
+  <div class="num">질문 3</div>
+  <div class="tx">전자책 관련은 종단연구이기 때문에 학술지에서 다루기는 어려우니까 배제하고 생각하자.</div>
+</div>
+
+<div class="ok"><span class="t">맞아. 완전히 배제하는 게 맞아</span>
+교수님이 두 가지를 다 짚으셨어.<br><br>
+<b>첫째, 전자책의 효과를 연구하는 것</b> — 종단연구(시간을 두고 여러 번 조사)가 필요하고, "내가 만든 자료가 효과 있다"는 전제가 깔리면 안 돼. 그래서 <b>추후 연구로</b>.<br><br>
+<b>둘째, 전자책 신청자를 설문 대상으로 쓰는 것</b> — 이것도 안 돼. 아래 질문 6에서 자세히 설명할게.</div>
+
+<!-- Q4 -->
+<div class="q">
+  <div class="meta">2026. 09. 18</div>
+  <div class="num">질문 4</div>
+  <div class="tx">그럼 "AI 환경에서"에 대한 배경 선행연구가 필요한 것 같은데, 교수님이 말한 게 그거인 거 같아. 맞아?</div>
+</div>
+
+<div class="ok"><span class="t">정확해. 그게 교수님 지시였어</span></div>
+
+<p>교수님 카톡 원문이 이거야.</p>
+<div class="card" style="font-size:14px;line-height:1.8">
+"그렇게 하셔도 되요. 근데 <b>그 결정이 선행연구 찾아보시면서 결정 하셔야 하고요.</b>"
+</div>
+
+<div class="ez"><span class="t">쉬운 설명 — 왜 근거가 필요한가</span>
+논문에서 "요즘 검색이 AI 중심으로 바뀌었다"고 쓰려면, <b>그게 진짜라는 걸 보여줘야 해.</b><br><br>
+친구에게 말할 때는 "요즘 그렇더라"로 충분하지만, 논문에서는 "누가 언제 조사해서 이런 숫자가 나왔다"를 대야 해. 안 그러면 "그거 네 생각 아니야?"가 되니까.</div>
+
+<h3>지금 있는 것과 더 필요한 것</h3>
+<table>
+  <tr><th style="width:96px">구분</th><th>자료</th></tr>
+  <tr><td class="small" style="color:var(--green);font-weight:800">확보</td><td>네이버 공식 보도자료 · 검색 점유율 기사(인터넷트렌드 기준) · 연관검색어 종료 기사 · 안용길(2026) — 플레이스 사업자에게 검색 노출·리뷰가 중요하다는 실증</td></tr>
+  <tr><td class="small" style="color:var(--gold);font-weight:800">부족</td><td><b>학술 근거가 얇아.</b> 대부분 뉴스와 보도자료야. 논문에서는 기사보다 논문 인용이 강해</td></tr>
+  <tr><td class="small" style="color:var(--gold);font-weight:800">필요</td><td>생성형 AI가 검색·소비자 정보탐색을 바꾸고 있다는 <b>학술 연구</b>. 김도현(2025)과 Aggarwal 외(2024) GEO 논문이 지금 가진 것이고, 2~3편 더 있으면 좋아</td></tr>
+</table>
+
+<div class="warn"><span class="t">기사를 인용할 때 반드시 지킬 것</span>
+검색 점유율은 <b>조사기관마다 숫자가 완전히 달라.</b> 인터넷트렌드 기준으로는 네이버가 1위인데, 스탯카운터 기준으로는 구글이 앞서.<br><br>
+그래서 논문에 "네이버 점유율 64.39%"라고만 쓰면 바로 지적받아. <b>"인터넷트렌드 기준"</b>을 꼭 붙이고, 각주에 "조사기관에 따라 수치가 다르다"를 한 줄 넣어야 해.</div>
+
+<!-- Q5 -->
+<div class="q">
+  <div class="meta">2026. 09. 18</div>
+  <div class="num">질문 5</div>
+  <div class="tx">변수명이 같으면 각각에 대한 선행연구이기 때문에 크게 상관없지만, A와 B가 바뀔 때는 관계 자체에 대한 문제 때문에 문제가 될 수 있는데, 나의 경우는 반두라가 있기에 가능하다는 거네. 운이 좋았네.</div>
+</div>
+
+<div class="ok"><span class="t">이해가 정확해. 그런데 운이 아니야</span></div>
+
+<div class="ez"><span class="t">쉬운 설명 — 레고 블록과 설명서</span>
+선행연구는 두 가지로 나눠서 생각하면 쉬워.<br><br>
+<b>블록</b> — 변수 하나하나를 재는 도구(척도). 자기효능감을 재는 블록, 성과를 재는 블록. <b>블록은 순서와 상관없어.</b> 어디에 끼우든 같은 블록이야.<br><br>
+<b>설명서</b> — 블록을 어떤 순서로 끼우는지 알려주는 것. "이걸 먼저 끼우고 저걸 나중에" 하는 게 설명서지. <b>순서가 바뀌면 설명서를 새로 찾아야 해.</b><br><br>
+지영이 경우는 <b>블록은 그대로 쓰고, 설명서만 바꾼 것</b>이야. 그리고 그 새 설명서가 <b>반두라</b>인 거지.</div>
+
+<h3>운이 아니라 이론이 원래 그렇게 되어 있어</h3>
+<table>
+  <tr><th style="width:130px">경로</th><th>반두라 이론에서의 위치</th></tr>
+  <tr><td><b>효능감 → 행동</b><br><span class="small">지금 모형</span></td><td><b>이론의 주 경로.</b> 반두라가 자기효능감이라는 개념을 만든 목적 자체가 "사람이 어떤 행동을 할지 예측하기 위해서"였어</td></tr>
+  <tr><td>행동 → 효능감</td><td><b>숙달경험.</b> 효능감이 만들어지는 네 가지 원천 중 가장 강력한 것. 해보고 성공하면 자신감이 붙는다는 것</td></tr>
+</table>
+
+<p>둘 다 이론 안에 있어. 그래서 어느 쪽으로 가도 반두라를 쓸 수 있었어. <b>운이 좋았던 게 아니라, 처음부터 이 이론을 골랐기 때문에 안전했던 거야.</b></p>
+
+<div class="warn"><span class="t">다만 한 편은 쓰는 방식이 바뀌어</span>
+신강선·지성구(2023)를 루크는 <b>"역량이 성과에 직접 영향을 주지 못했으니 매개가 필요하다"</b>는 설명서로 썼어. 지금은 매개변수가 행동이라 이 설명서가 그대로 안 맞아.<br><br>
+<b>버리는 건 아니야.</b> 이 논문은 이제 <b>블록</b>으로 써 — 마케팅 성과를 재는 척도의 출처로. 그리고 "심리·역량 변수는 무언가를 거쳐 성과로 간다"는 일반적 근거로도 쓸 수 있어.</div>
+
+<!-- Q6 -->
+<div class="q">
+  <div class="meta">2026. 09. 18</div>
+  <div class="num">질문 6</div>
+  <div class="tx">변수 하나당 척도 하나를 유지해야 이전에 했던 선행연구들이 문제가 안 된다는 거지? 이 경우에, 아니면 이런 경우가 아니더라도 동일해?</div>
+</div>
+
+<div class="bad"><span class="t">여기는 지영이가 두 가지를 하나로 묶어서 이해한 것 같아</span>
+사실 <b>서로 다른 두 문제</b>야. 같이 나왔지만 이유가 달라.</div>
+
+<table>
+  <tr><th style="width:150px">문제</th><th>무엇에 대한 것</th><th style="width:80px">언제 적용</th></tr>
+  <tr>
+    <td><b>변수 하나당<br>척도 하나</b></td>
+    <td><b>측정의 일관성.</b> 한 변수를 잴 때 여러 논문에서 문항을 섞어 오면, 각 논문이 그 개념을 조금씩 다르게 정의했기 때문에 잰 것이 뒤섞여</td>
+    <td class="small" style="color:var(--red);font-weight:800">항상<br>모든 논문</td>
+  </tr>
+  <tr>
+    <td><b>이전 선행연구를<br>쓸 수 있는지</b></td>
+    <td><b>구성개념의 동일성.</b> 그 논문이 잰 개념이 내가 재려는 개념과 같은가</td>
+    <td class="small">순서가<br>바뀔 때</td>
+  </tr>
+</table>
+
+<div class="ez"><span class="t">쉬운 설명 — 자를 섞어 쓰면 안 되는 이유</span>
+키를 재는데 <b>어떤 사람은 cm 자, 어떤 사람은 inch 자</b>를 쓰면 어떻게 될까? 숫자가 나오긴 하는데 서로 비교가 안 돼.<br><br>
+척도도 똑같아. A 논문의 "자기효능감"과 B 논문의 "자기효능감"은 <b>정의가 미묘하게 달라.</b> A는 "할 수 있다는 믿음"으로, B는 "잘 할 수 있다는 기대"로 정의했을 수 있어.<br><br>
+그래서 A에서 3문항, B에서 3문항 가져와 6문항으로 만들면, <b>두 가지 다른 것을 섞어서 재는 꼴</b>이 돼. 나중에 요인분석을 돌리면 두 덩어리로 갈라져서 "이게 한 변수냐"는 문제가 생기지.</div>
+
+<div class="ok"><span class="t">그래서 이렇게 하는 거야 — 항상</span>
+· 자기효능감 → <b>IESES 하나만</b><br>
+· 마케팅 성과 → <b>신강선·지성구 하나만</b><br><br>
+이건 지영이 연구만의 규칙이 아니라 <b>모든 논문의 기본</b>이야. 순서가 바뀌었든 안 바뀌었든 똑같이 지켜.<br><br>
+<b>예외는 하나 있어.</b> 한 변수에 하위요인이 여러 개인데 원척도가 일부만 다룰 때, 부족한 하위요인을 다른 논문에서 보충하는 경우가 있어. 그때는 논문에 "○○의 △요인과 □□의 ▽요인을 결합했다"고 명시하고, 요인분석으로 구조를 확인해야 해. 초보 단계에서는 안 건드리는 게 나아.</div>
+
+<!-- Q7 -->
+<div class="q">
+  <div class="meta">2026. 09. 18</div>
+  <div class="num">질문 7</div>
+  <div class="tx">플랫폼 활용행동은 검증된 척도가 없다고 했는데, 이 부분은 그럼 내가 최초로 문항을 만들어야 하는 부분인 거야? 척도가 아닌?</div>
+</div>
+
+<div class="ok"><span class="t">맞아. 그리고 "척도가 아닌 문항"이라는 구분도 정확해</span></div>
+
+<div class="ez"><span class="t">쉬운 설명 — 척도와 문항의 차이</span>
+<b>문항</b>은 질문 한 줄이야. "사진을 주기적으로 올린다" 같은 거지.<br><br>
+<b>척도</b>는 그 문항들이 <b>검증을 통과한 묶음</b>이야. 여러 연구에서 써보고, "이 문항들이 정말 이 개념을 재더라"는 게 확인된 상태.<br><br>
+지영이가 만드는 건 <b>문항</b>이야. 아직 척도가 아니지. 검증을 거치면 척도가 되는 거고, 그 검증이 지영이 논문에서 해야 할 일이야.</div>
+
+<h3>그런데 겁먹지 않아도 되는 이유가 있어</h3>
+<div class="ok"><span class="t">행동을 재는 변수는 원래 척도가 드물어</span>
+생각해보면 당연해. <b>행동은 맥락마다 완전히 달라.</b><br><br>
+"플랫폼 활용행동"을 재는 척도가 있다고 해도, 그게 미국 이커머스 셀러용이면 미용샵에 쓸 수 없어. 예약 기능도 없고 시술 사진도 없으니까.<br><br>
+그래서 <b>심리 변수</b>(효능감, 신뢰, 만족도)는 척도가 많고 잘 검증돼 있지만, <b>행동 변수</b>는 연구자가 맥락에 맞게 구성하는 경우가 흔해. 이건 지영이 연구의 결함이 아니야.</div>
+
+<h3>대신 세 가지를 반드시 해야 해</h3>
+<table>
+  <tr><th style="width:40px">1</th><td><b>근거를 대야 해.</b> 아무렇게나 만든 게 아니라 안용길(2026)의 플레이스 서비스 영역 구분과 네이버 공식 가이드를 바탕으로 했다고 써</td></tr>
+  <tr><th>2</th><td><b>내용타당도 검토.</b> 미용업 실무자 3명 + 온라인 마케팅 실무자 2명에게 "빠진 게 없나요? 이상한 문항 없나요?"를 물어. 몇 명에게 받았는지 논문에 적어</td></tr>
+  <tr><th>3</th><td><b>예비조사.</b> 1인 미용사업자 20~30명에게 먼저 돌려봐. 문항을 이해하는지, 몇 분 걸리는지 확인하고 다듬어</td></tr>
+</table>
+
+<div class="warn"><span class="t">한 가지 더 — 이 변수는 검사 방법이 달라</span>
+플랫폼 활용행동은 <b>형성적 지표</b>야. 항목들이 모여서 개념을 만드는 구조지.<br><br>
+<b>주머니 속 물건을 세는 것</b>과 같아. 지갑이 있다고 사탕이 있으란 법이 없지만, 다 합치면 "주머니가 얼마나 찼는지"가 나와. 예약 기능을 안 켠 사장님도 사진은 열심히 올릴 수 있으니까.<br><br>
+그래서 <b>요인분석이나 신뢰도(α)로 검사하는 게 맞지 않아.</b> 서로 비슷하게 움직이는지를 보는 방법이라서. 대신 <b>내용타당도</b>로 검사해. 교수님이 "CFA/EFA 및 신뢰도를 확인해야 한다"고 하셨으니, 이 점을 꼭 여쭤봐야 해.</div>
+
+<!-- Q8 -->
+<div class="q">
+  <div class="meta">2026. 09. 18</div>
+  <div class="num">질문 8</div>
+  <div class="tx">그럼 매개변수의 이름을 바꾸는 게 더 빠르려나. 교수님 제안으로 갈지 B로 갈지 고민되네.</div>
+</div>
+
+<div class="bad"><span class="t">이름만 바꾸는 건 안 돼</span>
+이게 가장 중요한 부분이야. <b>이름을 바꾸면 재는 것도 바뀌어.</b><br><br>
+"플랫폼 활용행동"을 "디지털 마케팅 역량"으로 바꾸면, 문항도 <b>"한다"에서 "할 수 있다"로 바뀌어야</b> 해. 이름만 갈고 문항을 그대로 두면 제목과 내용이 다른 연구가 돼.</div>
+
+<div class="ez"><span class="t">쉬운 설명 — 왜 역량으로 바꾸면 위험한가</span>
+지금 구조를 보자.<br><br>
+· 독립변수 <b>자기효능감</b> = "할 수 있다고 믿는다"<br>
+· 매개변수 <b>역량</b> = "할 수 있는 능력이 있다"<br><br>
+둘이 거의 같은 말 아니야? <b>믿음과 능력은 둘 다 "머릿속 상태"야.</b> 실제로 한 일이 아니지.<br><br>
+그러면 심사자가 물어. "독립변수와 매개변수가 같은 거 아닙니까?" 이걸 <b>구성개념 중복</b>이라고 해. 모형 자체가 흔들려.<br><br>
+반면 지금 구조는 깔끔해.<br>
+· 자기효능감 = <b>믿음</b> (머릿속)<br>
+· 플랫폼 활용행동 = <b>행동</b> (실제로 한 일)<br>
+· 마케팅 성과 = <b>결과</b><br><br>
+믿음 → 행동 → 결과. 세 개가 확실히 다른 층이야.</div>
+
+<h3>세 가지 길이 있어</h3>
+<table>
+  <tr><th style="width:44px">길</th><th style="width:120px">무엇</th><th>평가</th></tr>
+  <tr>
+    <td><b>A</b></td>
+    <td>지금 그대로<br>플랫폼 활용행동</td>
+    <td class="small" style="line-height:1.7"><b>개념은 가장 깔끔, 척도 근거는 가장 약함.</b><br>AI 대응 행동을 담을 수 있는 <b>유일한 길</b>이고, 그게 이 연구의 차별점이야. 척도를 직접 구성하는 부담을 지는 대신 연구의 독자성을 지켜</td>
+  </tr>
+  <tr>
+    <td><b>B</b></td>
+    <td>디지털 마케팅 역량<br><span class="small">교수님 제안</span></td>
+    <td class="small" style="line-height:1.7"><b>척도는 확실, 개념이 위험.</b><br>신강선·지성구(2023) 척도가 이미 있고 국내 소상인 검증도 됐어. 그런데 위에서 말한 <b>구성개념 중복</b> 문제가 생겨. 그리고 <b>3문항뿐</b>이라 매개변수로 너무 적어</td>
+  </tr>
+  <tr>
+    <td><b>C</b></td>
+    <td>Laradi 외(2023)<br>SMM capabilities</td>
+    <td class="small" style="line-height:1.7"><b>확인해봐야 알아.</b> 사업자 대상 12문항이라 수는 적절해. 문항이 <b>"한다"를 묻는다면 A안의 구세주</b>가 되고, <b>"할 수 있다"를 묻는다면 B안과 같은 문제</b>가 생겨</td>
+  </tr>
+</table>
+
+<div class="ok"><span class="t">루크 추천 — A안으로 가되 C안을 확인해봐</span>
+<b>먼저 Laradi 외(2023) 원문을 받아봐.</b> 이게 실행 빈도를 묻는 척도면 A안의 약점이 사라져. 검증된 척도로 플랫폼 활용행동을 잴 수 있게 되니까.<br><br>
+안 되면 <b>A안으로 가면서 교수님께 이렇게 여쭙자.</b></div>
+
+<div class="card" style="font-size:13.5px;line-height:1.85;white-space:pre-line">매개변수인 플랫폼 활용행동은 검증된 척도를
+찾지 못했습니다. 안용길(2026)의 플레이스 서비스
+영역 구분과 네이버 공식 가이드를 바탕으로 문항을
+구성하고, 내용타당도 검토와 예비조사로 검증하려
+합니다. 이 방식이 괜찮을지 여쭙고 싶습니다.
+
+대안으로 말씀해주신 디지털 마케팅 역량은
+독립변수인 자기효능감과 구성개념이 겹칠 것 같아
+망설여집니다. 둘 다 능력에 대한 인식이라
+독립변수와 매개변수가 구분되지 않을까 걱정됩니다.</div>
+
+<div class="warn"><span class="t">B안으로 가게 된다면</span>
+그때는 <b>독립변수를 바꿔야 해.</b> 자기효능감을 빼고 다른 심리 변수를 넣거나, 아니면 효능감을 그대로 두고 매개를 <b>고객참여·고객반응</b>(교수님의 또 다른 제안)으로 가는 방법이 있어.<br><br>
+고객참여·고객반응은 <b>고객 쪽에서 일어나는 일</b>이라 사업자의 효능감과 개념이 확실히 달라. 구성개념 중복이 없지. 다만 <b>AI 검색환경과의 연결이 약해지고</b>, 고객 데이터를 구해야 해서 조사가 어려워져.</div>
+
+<h2>정리 — 지금 확정된 것과 물어볼 것</h2>
+<table>
+  <tr><th style="width:96px">구분</th><th>내용</th></tr>
+  <tr><td class="small" style="color:var(--green);font-weight:800">확정</td><td>구조(효능감 → 활용행동 → 성과) · AI는 배경 · 자기효능감은 IESES · 성과는 신강선·지성구 · 전자책 배제 · 표본 경로 다양화</td></tr>
+  <tr><td class="small" style="color:var(--gold);font-weight:800">지영이<br>선택</td><td>제목을 콜론 형식으로 할지 "통해" 형식으로 할지 — <b>교수님 스타일에 맞추면 돼</b></td></tr>
+  <tr><td class="small" style="color:var(--red);font-weight:800">교수님께<br>여쭐 것</td><td>① 플랫폼 활용행동 척도를 직접 구성해도 될지 ② 형성적 지표라 요인분석이 안 맞는 점 ③ 리커트 5점 통일 ④ 제목 형식</td></tr>
+  <tr><td class="small" style="color:var(--navy);font-weight:800">지영이가<br>찾을 것</td><td>① Laradi 외(2023) 원문 ② RISS에서 IESES 한국어 번안본 ③ AI 검색환경 배경 학술 근거 2~3편</td></tr>
+</table>
+
+<h2>지금까지 만든 문서</h2>
+<div class="docs">
+  <a href="../"><div class="dt">2026. 09. 17</div><div class="tt">결정 보드</div>
+    <div class="ds">설문 문항 선택지와 진행 체크리스트</div></a>
+  <a href="../survey-items/"><div class="dt">2026. 09. 17</div><div class="tt">참고논문 설문 문항 모음</div>
+    <div class="ds">참고논문 5편의 측정 문항을 원문 그대로. 쪽수와 표 번호까지</div></a>
+  <a href="../answer/"><div class="dt">2026. 09. 17</div><div class="tt">두 가지 질문에 대한 답</div>
+    <div class="ds">변수 순서가 어디서 바뀌었나 / 선행연구 문항 원칙</div></a>
+  <a href="../final/"><div class="dt">2026. 09. 18 · 오전</div><div class="tt">교수님 자료 반영 최종 정리</div>
+    <div class="ds">교수님 자필 자료로 확정된 5가지, 제목 문제, 모형 A·B·C 비교</div></a>
+  <a href="../steps/"><div class="dt">2026. 09. 18 · 오후</div><div class="tt">선행연구 → 척도 → 설문문항 → 연구모형</div>
+    <div class="ds">기존 14편 A/B/C 분류, 척도 공백 진단, 최종 설문 39문항 구성안</div></a>
+  <a href="./" style="background:var(--soft)"><div class="dt">2026. 09. 18 · 지금 보는 문서</div><div class="tt">지영이 질문 8개에 대한 답</div>
+    <div class="ds">AI 검색환경의 위치 / 제목 두 형식 / 척도 하나 원칙 / 플랫폼 활용행동 척도 문제와 세 가지 길</div></a>
+</div>
+
+</div>
+
+<footer>지영 논문 · 황선희 교수님 지도<br>2026년 9월 18일</footer>
+
+</body>
+</html>
