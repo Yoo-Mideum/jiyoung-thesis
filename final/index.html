@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>교수님 자료 반영 최종 정리</title>
+<style>
+:root{--navy:#1f3a5f;--gold:#b8860b;--green:#2f6b4f;--red:#9c3028;
+  --bg:#f7f8fa;--card:#fff;--ink:#1f2328;--mute:#6a737d;--line:#e1e6ec;--soft:#f0f3f7;}
+@media (prefers-color-scheme:dark){:root{--navy:#8ab4e8;--gold:#e0b050;--green:#6fbf8f;--red:#e08880;
+  --bg:#15181d;--card:#1e222a;--ink:#e6eaf0;--mute:#98a2b0;--line:#2f3641;--soft:#252b34;}}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+  font-size:15px;line-height:1.78;word-break:keep-all;-webkit-text-size-adjust:100%;}
+.wrap{max-width:740px;margin:0 auto;padding:0 16px 60px;}
+header{background:#1f3a5f;color:#fff;padding:32px 16px 28px;margin-bottom:22px;}
+@media (prefers-color-scheme:dark){header{background:#1a2b42;}}
+header .in{max-width:740px;margin:0 auto;}
+header .k{font-size:11px;letter-spacing:.2em;color:#d4b878;font-weight:700;margin-bottom:9px;}
+header h1{font-size:23px;font-weight:800;margin:0 0 10px;line-height:1.4;color:#fff;}
+header p{font-size:13.5px;color:#c3d2e4;margin:0;line-height:1.7;}
+h2{font-size:18px;font-weight:800;color:var(--navy);margin:38px 0 14px;padding-bottom:9px;border-bottom:2px solid var(--navy);line-height:1.4;}
+h3{font-size:15.5px;font-weight:800;margin:26px 0 9px;line-height:1.5;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:17px;margin-bottom:15px;}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0;}
+th{background:var(--soft);text-align:left;padding:9px;border-top:1.5px solid var(--navy);border-bottom:1px solid var(--line);font-weight:700;font-size:13px;}
+td{padding:10px 9px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.62;}
+blockquote{margin:12px 0;padding:13px 16px;background:var(--soft);border-left:3px solid var(--navy);border-radius:0 8px 8px 0;font-size:14px;line-height:1.78;}
+blockquote .who{display:block;font-size:11.5px;color:var(--mute);font-weight:700;margin-bottom:5px;letter-spacing:.04em;}
+.ok{background:#eef5ef;border-left:3px solid var(--green);border-radius:0 8px 8px 0;padding:14px 16px;margin:14px 0;line-height:1.78;}
+@media (prefers-color-scheme:dark){.ok{background:#1e3328;}}
+.ok .t{font-weight:800;color:var(--green);display:block;margin-bottom:5px;}
+.bad{background:#fdeeed;border-left:3px solid var(--red);border-radius:0 8px 8px 0;padding:14px 16px;margin:14px 0;line-height:1.78;}
+@media (prefers-color-scheme:dark){.bad{background:#2d1e1c;}}
+.bad .t{font-weight:800;color:var(--red);display:block;margin-bottom:5px;}
+.warn{background:#fdf6e8;border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:14px 16px;margin:14px 0;line-height:1.78;}
+@media (prefers-color-scheme:dark){.warn{background:#2b2418;}}
+.warn .t{font-weight:800;color:var(--gold);display:block;margin-bottom:5px;}
+.q{background:var(--card);border:2px solid var(--navy);border-radius:12px;padding:16px 18px;margin-bottom:24px;}
+.q .lb{font-size:11px;font-weight:800;color:var(--navy);letter-spacing:.1em;margin-bottom:8px;}
+.q p{margin:0 0 7px;font-size:14.5px;line-height:1.7;}
+.q p:last-child{margin-bottom:0;}
+.flow{text-align:center;font-weight:800;color:var(--navy);background:var(--soft);padding:14px;border-radius:10px;margin:14px 0;line-height:1.85;font-size:14.5px;}
+.docs{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:14px;}
+.docs a{display:block;padding:15px 17px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);}
+.docs a:last-child{border-bottom:none;}
+.docs .dt{font-size:11.5px;color:var(--mute);font-weight:700;letter-spacing:.03em;margin-bottom:3px;}
+.docs .tt{font-size:15px;font-weight:800;color:var(--navy);line-height:1.45;}
+.docs .ds{font-size:13px;color:var(--mute);margin-top:4px;line-height:1.6;}
+.small{font-size:13px;color:var(--mute);}
+footer{text-align:center;font-size:12.5px;color:var(--mute);padding:26px 16px;line-height:2;}
+</style>
+</head>
+<body>
+
+<header><div class="in">
+  <div class="k">2026년 9월 18일 · 최종 확정</div>
+  <h1>연구주제가<br>확정됐어</h1>
+  <p>교수님과 정리된 최종 구조와, 그에 따라<br>바뀐 것·남은 숙제를 정리했어.</p>
+</div></header>
+
+<div class="wrap">
+
+<div class="warn"><span class="t">먼저 밝힐 것</span>
+이 정리는 <b>교수님 자필 자료 사진</b>을 기준으로 했어. 플라우드 녹취 요약은 링크 구조상 루크가 본문을 읽지 못했고, 제목("09-11 학술지 논문 주제 선정 및 구체화를 위한 지도교포 멘토링")만 확인했어.<br><br>
+<b>녹취본에 사진에 없는 내용이 있으면 따로 알려줘.</b> 특히 교수님이 말씀으로만 짚으신 게 있으면 이 정리가 달라질 수 있어.</div>
+
+<h2>확정된 연구주제</h2>
+
+<div class="card" style="border:2px solid var(--navy)">
+  <div class="small" style="margin-bottom:6px;font-weight:700;color:var(--navy)">제목</div>
+  <div style="font-size:16.5px;font-weight:800;line-height:1.55;margin-bottom:14px">미용사업자의 디지털 마케팅 자기효능감이<br>플랫폼 활용행동과 마케팅 성과에 미치는 영향</div>
+  <div class="small" style="margin-bottom:6px;font-weight:700;color:var(--navy)">연구문제</div>
+  <div style="font-size:14.5px;line-height:1.75">AI 검색환경이라는 변화된 디지털 마케팅 환경에서, 미용사업자의 디지털 마케팅 자기효능감이 플랫폼 활용행동을 통해 마케팅 성과에 어떠한 영향을 미치는가</div>
+</div>
+
+<div class="flow">디지털 마케팅 자기효능감<br>↓<br>플랫폼 활용행동<br>↓<br>마케팅 성과</div>
+
+<div class="ok"><span class="t">AI 검색환경의 위치도 확정</span>
+독립변수로 <b>직접 측정하지 않아.</b> 미용사업자가 디지털 마케팅 활동을 수행하는 <b>연구의 환경·맥락</b>으로 가져가. 그래서 서론과 이론적 배경에서 다루고, 변수로는 넣지 않아.</div>
+
+<h2>제목에 대해 하나 짚을게</h2>
+
+<div class="warn"><span class="t">제목과 구조가 어긋나</span>
+확정된 구조는 <b>자기효능감 → 플랫폼 활용행동 → 마케팅 성과</b>, 즉 매개 구조야.<br><br>
+그런데 제목의 <b>"플랫폼 활용행동과 마케팅 성과에 미치는 영향"</b>은 학계 관례상 이렇게 읽혀:<br><br>
+· 자기효능감 → 플랫폼 활용행동<br>
+· 자기효능감 → 마케팅 성과<br><br>
+두 경로를 <b>나란히</b> 본다는 뜻이야. 매개(A를 거쳐 C로 간다)가 아니라 병렬(A가 B에도 C에도 영향을 준다)로 보여.</div>
+
+<p>논문 제목은 그 자체로 연구모형을 알려주는 역할을 해. 심사자가 제목만 보고 "이건 병렬 구조인가 매개 구조인가" 헷갈리면 안 돼. 그래서 매개 연구는 거의 예외 없이 이 틀을 써.</p>
+<blockquote>A가 C에 미치는 영향 <b>:</b> B의 <b>매개효과</b></blockquote>
+
+<h3>제목 두 안</h3>
+<div class="card">
+  <div class="small" style="font-weight:700;color:var(--navy);margin-bottom:5px">안 1 · AI 검색환경을 제목에 남기는 경우</div>
+  <div style="font-size:14.5px;font-weight:700;line-height:1.6;margin-bottom:8px">AI 검색환경에서 미용사업자의 디지털 마케팅 자기효능감이 마케팅 성과에 미치는 영향: 플랫폼 활용행동의 매개효과</div>
+  <div class="small">맨 앞의 "AI 검색환경에서"는 <b>맥락 한정어</b>야. 변수가 아니라 배경이라는 걸 제목에서 이미 보여줘. 교수님이 "연구환경으로 가져가라"고 하신 것과 맞아떨어져.</div>
+</div>
+<div class="card">
+  <div class="small" style="font-weight:700;color:var(--navy);margin-bottom:5px">안 2 · AI를 제목에서 빼는 경우</div>
+  <div style="font-size:14.5px;font-weight:700;line-height:1.6;margin-bottom:8px">미용사업자의 디지털 마케팅 자기효능감이 마케팅 성과에 미치는 영향: 플랫폼 활용행동의 매개효과</div>
+  <div class="small">간결하고 변수 관계만 남아. 대신 AI 검색환경은 서론에서만 다루게 되고, 제목에서는 이 연구가 왜 지금 필요한지가 안 보여.</div>
+</div>
+
+<div class="ok"><span class="t">루크는 안 1</span>
+교수님이 "AI 검색환경을 연구환경으로"라고 하신 걸 제목이 정확히 반영해. 그리고 AI 대응 행동을 플랫폼 활용행동 문항에 넣을 계획이라면, 제목에 AI가 남아 있는 게 본문과 일관돼.<br><br>
+<b>다만 이건 지영이가 교수님과 정리한 제목이니까, 루크 판단보다 교수님 확인이 우선이야.</b> 22일 카톡에 한 줄 넣자 — "제목을 '…마케팅 성과에 미치는 영향: 플랫폼 활용행동의 매개효과' 형태로 다듬어도 될까요?"</div>
+
+<h2>1. 교수님 자료로 확정된 것 — 다섯 가지</h2>
+
+<h3>① 순서 — 이렇게 확정된 경위</h3>
+<blockquote><span class="who">교수님 자료</span>
+자기효능감을 매개로 하는 것이 <b>부적절하다</b>. 반두라의 자기효능감은 성공적 결과로 인한 효능감이 높아질 수 있다는 이론이므로 인과관계가 어색하여 오히려 과정이 아래와 같이 방향이 흘러야 자연스럽다고 판단된다.</blockquote>
+<div class="flow">✓ 디지털 마케팅 자기효능감 → 플랫폼 활용 행동 → 마케팅 성과</div>
+<p>1번 항목에 <b>직접 체크하셨어.</b> 지영이가 물었던 "어디서 바뀌었나"의 답이 이거야. 9월 11일 상담에서 교수님이 명시적으로 바꾸신 거고, 루크가 만든 이전 모형은 기각됐어.</p>
+<p class="small">교수님이 대안도 적어주셨어 — "혹은 고객참여, 고객반응, 디지털마케팅 역량 같은 매개효과를 찾아도 좋을 것 같으나, 기존에 고민한 1번 괜찮은 듯". 이건 아래 4번에서 다시 나와.</p>
+
+<h3>② 측정도구 — 지영이 말이 맞았어</h3>
+<blockquote><span class="who">교수님 자료 · 동그라미 표시</span>
+독립변수를 학생이 <b>재구성한 지표로 사용할 수 없다.</b> 핵심 변수는 기존 선행연구에서 신뢰도와 타당도가 검증된 척도를 우선 사용한다. 새로운 플랫폼 환경에 맞게 <b>표현만 최소한으로 수정</b>하고, CFA/EFA 및 신뢰도·수렴/판별타당도를 확인해야 합니다.</blockquote>
+<div class="ok"><span class="t">지영이가 물었던 원칙이 교수님 글에 그대로 있어</span>
+"원래 선행연구의 문항들을 추려서 큰 틀을 바꾸지 않는 선에서 만들어야 선행연구라는 말에 의미가 있다" — 이게 교수님 지시와 일치해.<br><br>
+그래서 <b>결정 1은 안 1(원척도 충실형)로 확정.</b> 더 고를 게 없어졌어. 루크가 처음 만든 "재구성 지표"는 쓸 수 없고, 안 2·안 3도 같은 이유로 탈락이야.</div>
+
+<h3>③ 전자책을 연구에 쓰는 것 — 이번 논문에서 빠져</h3>
+<blockquote><span class="who">교수님 자료</span>
+전자책을 직접적으로 연구에 활용하는 것은 가이드 적용전 → 30일 가이드 실행 → 적용후를 비교하는 <b>종단연구</b>가 이뤄져야 맞고, 그것 또한 전문가 내용검토, <b>개인이 만든 자료 자체가 효과가 있다는 전제가 있으면 안 되는</b> 여러 가지 내용을 고려해야 하는 이슈가 있어 <b>추후 연구에 활용</b>하는 것이 좋겠음.</blockquote>
+
+<h3>④ 전자책 신청자 표본 — 쓰면 안 돼</h3>
+<blockquote><span class="who">교수님 자료</span>
+전자책 신청자를 표본으로 하면 오히려 이미 관심자들로 몰려있기 때문에 단순한 편의표집 보다는 <b>자기선택편향과 범위제한</b>이 있을 수 있어 상위답변에 응답이 몰릴 수 있어서 분석에 오히려 방해가 될 가능성이 큼. 모집단은 <b>미용사업자 커뮤니티, 협회, 오픈채팅, SNS 등 고루 사용하여 모집경로를 다양화</b>하는 것이 좋을 듯 싶음.</blockquote>
+<div class="bad"><span class="t">이게 제일 큰 변화야</span>
+루크는 "편의표집이라는 한계를 명시하면 된다"고 했는데, 교수님은 <b>한계 명시로 해결되는 문제가 아니라고</b> 보셨어.<br><br>
+<b>범위제한</b>이 왜 문제인지 — 플레이스에 관심 있는 사람만 모이면 자기효능감 점수가 높은 쪽에만 몰려. 그러면 낮은 사람과 높은 사람을 비교할 수가 없어서 상관관계 자체가 안 잡혀. 통계적으로 결과가 안 나오는 거야.<br><br>
+<b>표본 계획을 처음부터 다시 짜야 해.</b></div>
+
+<h3>⑤ 남은 숙제 두 개</h3>
+<blockquote><span class="who">교수님 자료</span>
+그러나 사실 가장 중요한 것은 여기에 변수는 디지털마케팅 자기효능감, 플랫폼 활용 행동, 마케팅 성과 중에 <b>어디에 AI검색환경 변수가 들어가는건지 아니면 단순한 연구환경인 것인지 정확히 확인이 필요함.</b><br><br>
+1번을 하게 될 경우 <b>최종 연구 모형을 2~3개 정도 더 심층적으로 조사</b>해보는 것을 권함. 그중에서 어떤 안이 가장 나은지 추후 판단하는 것을 권함.</blockquote>
+<p>AI검색환경 문제는 9월 17일 카톡 답변에서 교수님이 "연구배경으로 하셔도 되는데 그 결정을 선행연구 찾아보면서 하라"고 하셨고, 루크가 탐색 기록을 만들어 뒀어. 그건 <a href="../survey-items/">별도 문서</a>에 정리되어 있어.</p>
+
+<h2>2. 지영이 질문에 대한 답</h2>
+
+<div class="q">
+  <div class="lb">지영이 질문 ②</div>
+  <p>변수의 형태가 바뀌었어도 이전에 찾았던 선행연구를 그대로 쓸 수 있다고 했잖아. 이게 <b>반두라 법칙 때문</b>이야? 아니면 <b>각 변수의 키워드이기 때문에</b> 순서가 바뀌어도 쓸 수 있는 거야?</p>
+</div>
+
+<div class="ok"><span class="t">둘 중 하나가 답이 아니고, 용도가 네 가지로 나뉘어</span></div>
+
+<table>
+  <tr><th style="width:150px">선행연구의 용도</th><th style="width:96px">순서 바뀌면</th><th>왜</th></tr>
+  <tr><td><b>① 측정도구 출처</b></td><td style="color:var(--green);font-weight:700">영향 없음</td><td>변수명이 같으면 문항도 같아. "자기효능감을 이 척도로 잰다"는 사실은 위치와 무관</td></tr>
+  <tr><td><b>② 개념 정의</b></td><td style="color:var(--green);font-weight:700">영향 없음</td><td>자기효능감의 정의는 독립이든 매개든 동일</td></tr>
+  <tr><td><b>③ 변수 간 관계 근거</b></td><td style="color:var(--red);font-weight:700">직접 영향</td><td>"A가 B에 영향을 준다"를 지지하는 논문은 A와 B가 바뀌면 다시 찾아야 해</td></tr>
+  <tr><td><b>④ 연구공백·배경</b></td><td style="color:var(--green);font-weight:700">영향 없음</td><td>안용길(2026)의 업종별 한계는 순서와 무관</td></tr>
+</table>
+
+<p><b>지영이가 말한 "변수 키워드이기 때문"은 ①②④에 대해 정확해.</b> 그리고 <b>③이 반두라가 구해준 부분</b>이야. 이론이 효능감→행동 경로를 지지하니까 이론 문헌은 그대로 살았어.</p>
+
+<div class="warn"><span class="t">단 한 편은 쓰는 방식이 바뀌어</span>
+신강선·지성구(2023)를 루크는 "역량→성과 직접효과가 없었으니 매개가 필요하다"는 근거로 썼어. 지금 모형에서는 매개변수가 행동이라 이 논리가 그대로 안 맞아.<br><br>
+<b>인용은 유지하되 용도가 바뀌어</b> — 종속변수 척도 출처(①번 용도)와 "심리·역량 변수는 무언가를 거쳐 성과로 간다"는 일반적 근거로.</div>
+
+<div class="q">
+  <div class="lb">지영이 질문 ②-1</div>
+  <p>그렇다면 기존의 선행연구 + 더 추가할 선행연구를 토대로 설문문항을 만드는데 <b>문제가 정확히 없는지</b> 궁금해.</p>
+</div>
+
+<div class="ok"><span class="t">문제없어. 단 조건 세 개를 지켜야 해</span></div>
+
+<table>
+  <tr><th style="width:40px">1</th><td><b>변수 하나당 척도 하나.</b> 여러 논문에서 문항을 섞어 오면 안 돼. 개념 정의가 충돌해. 자기효능감은 IESES 하나, 성과는 신강선·지성구 하나</td></tr>
+  <tr><th>2</th><td><b>표현만 최소 수정.</b> 교수님이 "최소한으로"라고 쓰셨어. "플레이스" 같은 맥락어를 넣는 정도까지고, 문항의 의미를 바꾸면 안 돼</td></tr>
+  <tr><th>3</th><td><b>검증 절차 네 개.</b> CFA/EFA, 신뢰도, 수렴타당도, 판별타당도. 교수님이 다 적어놓으셨어</td></tr>
+</table>
+
+<div class="bad"><span class="t">여기서 문제가 하나 남아</span>
+<b>플랫폼 활용 행동은 검증된 척도가 없어.</b> 교수님은 "핵심 변수는 검증된 척도를 우선"이라고 하셨는데, 이 변수는 우선할 척도가 없는 상황이야.<br><br>
+교수님이 대안 매개변수(고객참여, 고객반응, 디지털마케팅 역량)를 제시하신 것도 <b>이 문제를 이미 보셨기 때문</b>일 수 있어. 다음 상담에서 반드시 여쭤야 할 부분이야.</div>
+
+<div class="q">
+  <div class="lb">지영이 질문 ②-2</div>
+  <p>문제가 없다면 <b>추가 선행연구를 찾아줘.</b></p>
+</div>
+
+<p>효능감 → 행동 → 성과 구조를 지지하는 국내 연구야. KCI에서 확인했고, <b>원문은 아직 안 봤으니</b> 지영이가 받아서 확인해줘.</p>
+
+<div class="card">
+  <h3 style="margin-top:0">① 긍정심리자본 → 혁신행동 → 직무성과</h3>
+  <p class="small" style="margin:0 0 8px">KCI ART002519736 · 조직지원인식의 조절효과를 중심으로</p>
+  <p style="margin:0">자기효능감을 포함한 긍정심리자본이 <b>혁신행동을 매개로</b> 직무성과에 영향. 금융업·공기업·IT 서비스 기업 대상.<br>
+  <b>구조가 지금 모형과 거의 같아.</b> 심리 → 행동 → 성과. 매개 논리의 근거로 가장 쓸 만해.</p>
+</div>
+
+<div class="card">
+  <h3 style="margin-top:0">② 자기효능감 → 직무태도 → 생산성</h3>
+  <p class="small" style="margin:0 0 8px">KCI ART002119249</p>
+  <p style="margin:0">자기효능감이 직무만족·조직몰입을 거쳐 생산성에 영향. <b>효능감을 독립변수로 둔 매개 구조</b>라 순서를 방어할 때 쓸 수 있어.</p>
+</div>
+
+<div class="card">
+  <h3 style="margin-top:0">③ 고객참여행동·고객시민행동 → 자기효능감 → 소비생활 만족</h3>
+  <p class="small" style="margin:0 0 8px">KCI ART003042960 · 자영업·경영자 655부, 한국소비자원 2022년 소비자 역량 조사</p>
+  <p style="margin:0">교수님이 대안으로 제시한 <b>"고객참여"가 여기 나와.</b> 다만 이 논문은 <b>효능감을 매개로 뒀으니</b> 교수님이 부적절하다고 하신 구조야. <b>반례로 읽는 게 맞아</b> — "이런 연구도 있지만 교수님 지적대로 인과가 어색하다"는 식으로.</p>
+</div>
+
+<div class="warn"><span class="t">아직 못 찾은 것</span>
+<b>디지털·온라인 맥락</b>에서 효능감 → 활용행동 → 성과를 검증한 국내 연구. 검색으로는 실무 자료만 나왔어.<br><br>
+<b>Connected Papers</b>(connectedpapers.com)에 IESES 논문을 넣어서 인용 후속 연구를 보는 게 가장 빨라. 논문 하나를 넣으면 인용 관계를 지도로 보여주는 사이트야. 이건 지영이가 해줘.</div>
+
+<h2>3. 새로 생긴 과제 — 모형 2~3개</h2>
+<p>교수님이 권하신 거야. 지금 있는 것 하나에 두 개를 더 만들어 비교하는 거지.</p>
+
+<table>
+  <tr><th style="width:50px">안</th><th style="width:150px">매개변수</th><th>평가</th></tr>
+  <tr><td><b>A</b></td><td>플랫폼 활용 행동</td><td>지금 모형. AI 대응 행동을 담을 수 있는 유일한 안이지만 <b>검증된 척도가 없다</b>는 약점</td></tr>
+  <tr><td><b>B</b></td><td>디지털 마케팅 역량</td><td>교수님 제안. <b>신강선·지성구(2023) 척도가 이미 우리 손에 있어</b>(표2, p.49). 교수님의 "검증된 척도 우선" 원칙을 정면으로 만족</td></tr>
+  <tr><td><b>C</b></td><td>고객참여 / 고객반응</td><td>교수님 제안. 척도 존재. 다만 AI 검색환경과의 연결이 약해짐</td></tr>
+</table>
+
+<div class="ok"><span class="t">B안이 눈에 띄어</span>
+A안의 가장 큰 약점(척도 없음)을 B안이 해결해. 그리고 척도를 새로 구하러 다닐 필요도 없어 — 이미 읽은 논문에 있으니까.<br><br>
+다만 B안으로 가면 <b>AI 대응 행동을 넣을 자리가 없어져.</b> 그게 이 연구의 유일한 차별점이었는데 말이야. 그래서 A와 B 사이에 맞바꿈이 있어. 이건 교수님과 상의해서 정할 문제야.</div>
+
+<h2>4. 그래서 다음에 할 일</h2>
+<table>
+  <tr><th style="width:40px">1</th><td><b>표본 계획 다시 짜기</b> — 전자책 신청자 빼고, 미용사업자 커뮤니티·협회·오픈채팅·SNS로 경로 다양화. 경로별 목표 인원까지 정하기</td></tr>
+  <tr><th>2</th><td><b>모형 A·B·C 비교표 만들기</b> — 교수님이 2~3개 권하셨으니 26일 제출물에 넣기</td></tr>
+  <tr><th>3</th><td><b>IESES 문항 선별</b> — 리더십 5문항 제외, 미용샵 무관 문항(하드웨어 설치·쇼핑몰 제작·원가 분석·관세) 제외. 표현만 최소 수정</td></tr>
+  <tr><th>4</th><td><b>추가 선행연구 원문 확보</b> — 위 3편 + Connected Papers로 IESES 후속 연구</td></tr>
+  <tr><th>5</th><td><b>플랫폼 활용 행동의 척도 문제</b>를 교수님께 여쭙기</td></tr>
+</table>
+
+<h2>지금까지 만든 문서</h2>
+<div class="docs">
+  <a href="../">
+    <div class="dt">2026. 09. 17</div>
+    <div class="tt">결정 보드</div>
+    <div class="ds">설문 문항 관련 선택지 6개와 진행 체크리스트. 고르면 기기에 저장되고, 결과를 복사해 카톡으로 보낼 수 있어</div>
+  </a>
+  <a href="../survey-items/">
+    <div class="dt">2026. 09. 17</div>
+    <div class="tt">참고논문 설문 문항 모음</div>
+    <div class="ds">1번 주제 참고논문 5편의 측정 문항을 원문 그대로. 쪽수와 표 번호까지 표기. IESES 16문항 전체, 김도현(2025) 15문항 전체 포함</div>
+  </a>
+  <a href="../answer/">
+    <div class="dt">2026. 09. 17</div>
+    <div class="tt">두 가지 질문에 대한 답</div>
+    <div class="ds">변수 순서가 어디서 바뀌었나 / 논문을 다시 조사해야 하나 / 선행연구 문항 원칙. 루크가 추천을 안 2에서 안 1로 바꾼 이유</div>
+  </a>
+  <a href="./" style="background:var(--soft)">
+    <div class="dt">2026. 09. 18 · 지금 보는 문서</div>
+    <div class="tt">교수님 자료 반영 최종 정리</div>
+    <div class="ds">교수님 자필 자료로 확정된 5가지, 선행연구를 그대로 쓸 수 있는 이유, 추가 선행연구 3편, 모형 A·B·C 비교</div>
+  </a>
+</div>
+
+</div>
+
+<footer>지영 논문 · 황선희 교수님 지도<br>2026년 9월 18일 갱신</footer>
+
+</body>
+</html>
