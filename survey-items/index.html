@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1번 주제 참고논문 설문 문항 모음</title>
+<style>
+:root{--navy:#1f3a5f;--gold:#b8860b;--green:#2f6b4f;--red:#9c3028;
+  --bg:#f7f8fa;--card:#fff;--ink:#1f2328;--mute:#6a737d;--line:#e1e6ec;--soft:#f0f3f7;}
+@media (prefers-color-scheme:dark){:root{--navy:#8ab4e8;--gold:#e0b050;--green:#6fbf8f;--red:#e08880;
+  --bg:#15181d;--card:#1e222a;--ink:#e6eaf0;--mute:#98a2b0;--line:#2f3641;--soft:#252b34;}}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+  font-size:15px;line-height:1.72;word-break:keep-all;-webkit-text-size-adjust:100%;}
+.wrap{max-width:780px;margin:0 auto;padding:0 16px 70px;}
+header{background:#1f3a5f;color:#fff;padding:30px 16px 26px;margin-bottom:22px;}
+@media (prefers-color-scheme:dark){header{background:#1a2b42;}}
+header .in{max-width:780px;margin:0 auto;}
+header .k{font-size:11px;letter-spacing:.2em;color:#d4b878;font-weight:700;margin-bottom:8px;}
+header h1{font-size:23px;font-weight:800;margin:0 0 9px;line-height:1.35;color:#fff;}
+header p{font-size:13.5px;color:#c3d2e4;margin:0;}
+nav{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:13px 15px;margin-bottom:22px;font-size:13.5px;line-height:2;}
+nav a{color:var(--navy);text-decoration:none;font-weight:700;margin-right:14px;}
+h2{font-size:17px;font-weight:800;color:var(--navy);margin:34px 0 4px;padding-bottom:8px;border-bottom:2px solid var(--navy);line-height:1.4;}
+h3{font-size:14.5px;font-weight:800;margin:20px 0 8px;color:var(--ink);}
+.src{font-size:12.5px;color:var(--mute);line-height:1.7;margin:0 0 14px;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:17px;margin-bottom:15px;}
+.meta{display:grid;grid-template-columns:78px 1fr;gap:5px 10px;font-size:13px;line-height:1.6;margin-bottom:4px;}
+.meta dt{color:var(--navy);font-weight:700;}
+.meta dd{margin:0;}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0 4px;}
+th{background:var(--soft);text-align:left;padding:8px 9px;border-top:1.5px solid var(--navy);border-bottom:1px solid var(--line);font-weight:700;font-size:12.5px;}
+td{padding:9px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.6;}
+td.c{width:52px;color:var(--navy);font-weight:700;font-size:12.5px;white-space:nowrap;}
+.pg{display:inline-block;background:var(--soft);border-radius:4px;padding:1px 7px;font-size:11.5px;font-weight:700;color:var(--navy);white-space:nowrap;}
+.warn{background:#fdf6e8;border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:12px 14px;font-size:13px;line-height:1.7;margin:12px 0;}
+@media (prefers-color-scheme:dark){.warn{background:#2b2418;}}
+.warn b{color:var(--gold);}
+.miss{background:#fdeeed;border-left:3px solid var(--red);border-radius:0 8px 8px 0;padding:12px 14px;font-size:13px;line-height:1.7;margin:12px 0;}
+@media (prefers-color-scheme:dark){.miss{background:#2d1e1c;}}
+.miss b{color:var(--red);}
+.ok{background:#eef5ef;border-left:3px solid var(--green);border-radius:0 8px 8px 0;padding:12px 14px;font-size:13px;line-height:1.7;margin:12px 0;}
+@media (prefers-color-scheme:dark){.ok{background:#1e3328;}}
+.ok b{color:var(--green);}
+.use{font-size:12.5px;color:var(--mute);border-top:1px dashed var(--line);margin-top:11px;padding-top:9px;line-height:1.65;}
+.use b{color:var(--ink);}
+footer{text-align:center;font-size:12px;color:var(--mute);padding:26px 16px;line-height:1.8;}
+footer a{color:var(--navy);}
+.en{color:var(--mute);font-size:12px;display:block;margin-top:2px;}
+</style>
+</head>
+<body>
+
+<header><div class="in">
+  <div class="k">1번 주제 · 사업자 관점</div>
+  <h1>참고논문 설문 문항 모음</h1>
+  <p>논문별 측정 문항을 원문 그대로 · 쪽수와 표 번호까지</p>
+</div></header>
+
+<div class="wrap">
+
+<nav>
+  <a href="#p1">① IESES</a><a href="#p2">② 신강선·지성구</a><a href="#p3">③ 김도현</a>
+  <a href="#p4">④ 박윤미·오윤경</a><a href="#p5">⑤ 안용길</a><a href="#sum">정리</a>
+</nav>
+
+<div class="warn">
+  <b>표기 원칙.</b> 원문에 실린 문항만 옮겼습니다. 문항이 실려 있지 않은 논문은 <b>"원문에 문항 없음"</b>이라고 그대로 적었고, 추측해서 채우지 않았습니다. 확인 날짜는 2026년 9월 17일입니다.
+</div>
+
+<!-- ① IESES -->
+<h2 id="p1">① IESES — 독립변수(자기효능감)의 원척도</h2>
+<p class="src">
+Wang, Y.-S., Tseng, T. H., Wang, Y.-M., &amp; Chu, C.-W. (2020). Development and validation of an internet entrepreneurial self-efficacy scale. <i>Internet Research, 30</i>(2), 653-675.<br>
+<b>문항 확인 경로</b> — 원 논문은 유료. 오픈액세스 번안 논문 Torres-Miranda et al. (2024), <i>Frontiers in Education, 9</i>, 1370490의 <b>TABLE 1 (p. 5)</b>에 영어 원문 16문항이 전부 수록됨.
+</p>
+
+<div class="card">
+  <dl class="meta">
+    <dt>구성</dt><dd>16문항 3요인</dd>
+    <dt>척도</dt><dd>7점 리커트 (1 전혀 아니다 ~ 7 매우 그렇다)</dd>
+    <dt>신뢰도</dt><dd>전체 α=.94 · 리더십 .87 · 기술 활용 .92 · 인터넷 마케팅 .95</dd>
+    <dt>설명력</dt><dd>3요인 총분산설명력 69.37%</dd>
+    <dt>개발 경위</dt><dd>초기 38문항 → 탐색적 요인분석 반복 → 16문항 3요인 확정</dd>
+  </dl>
+</div>
+
+<h3>요인 1 · 리더십 <span class="pg">문항 1~5</span></h3>
+<table>
+  <tr><th style="width:52px">번호</th><th>내용</th></tr>
+  <tr><td class="c">1</td><td>리더가 될 능력이 있다<span class="en">I possess the ability to be a leader</span></td></tr>
+  <tr><td class="c">2</td><td>다른 사람이 내 생각에 동의하도록 만들 수 있다<span class="en">I can make others agree with my thoughts</span></td></tr>
+  <tr><td class="c">3</td><td>내 능력을 보완해 줄 동업자를 찾을 수 있다</td></tr>
+  <tr><td class="c">4</td><td>동업자와 원활하게 대화할 수 있다<span class="en">I could have pleasant conversations with my work partners</span></td></tr>
+  <tr><td class="c">5</td><td>충분히 숙의한 뒤 의사결정을 내릴 수 있다</td></tr>
+</table>
+<div class="miss"><b>이 요인은 쓸 수 없습니다.</b> 1인 미용사업자는 동업자도 직원도 없습니다. 박윤미·오윤경(2020, p. 149)이 1인 미용기업을 "공동사업자나 상시 근로자 없이 오로지 창업자(경영자) 혼자서 운영하는 형태의 기업"으로 정의한 것이 근거입니다. 물어봐도 답할 수가 없는 문항입니다.</div>
+
+<h3>요인 2 · 기술 활용 <span class="pg">문항 6~9</span></h3>
+<table>
+  <tr><th style="width:52px">번호</th><th>내용</th></tr>
+  <tr><td class="c">6</td><td>사업에 필요한 컴퓨터 파일을 기본적으로 관리할 수 있다</td></tr>
+  <tr><td class="c">7</td><td>사업에 필요한 기본적인 컴퓨터 하드웨어를 설치하고 다룰 수 있다<span class="en">I can install and manipulate basic types of computer hardware to help my business</span></td></tr>
+  <tr><td class="c">8</td><td>사업에 멀티미디어 장비를 활용할 수 있다<span class="en">I can use multi-media hardware to help my business</span></td></tr>
+  <tr><td class="c">9</td><td>웹사이트 응용 프로그램을 설치하고 사용할 수 있다<span class="en">I have the ability to install and use website applications</span></td></tr>
+</table>
+
+<h3>요인 3 · 인터넷 마케팅·전자상거래 <span class="pg">문항 10~16</span></h3>
+<table>
+  <tr><th style="width:52px">번호</th><th>내용</th></tr>
+  <tr><td class="c">10</td><td>바이럴 마케팅 같은 혁신적인 인터넷 마케팅 전략을 세울 수 있다</td></tr>
+  <tr><td class="c">11</td><td>독자적인 전자상거래 웹사이트를 만들 수 있다<span class="en">I can create a unique electronic commerce website</span></td></tr>
+  <tr><td class="c">12</td><td>전자상점의 가격 전략을 수립할 수 있다</td></tr>
+  <tr><td class="c">13</td><td>전자상점의 원가 구조를 분석할 수 있다</td></tr>
+  <tr><td class="c">14</td><td>수익성 있는 전자상거래 비즈니스 모델을 제안할 수 있다<span class="en">I can propose a profitable business model for electronic commerce</span></td></tr>
+  <tr><td class="c">15</td><td>전자상점 운영에 필요한 자원을 확보할 수 있다</td></tr>
+  <tr><td class="c">16</td><td>수출입과 관련된 관세 문제를 해결할 수 있다<span class="en">I can solve tariff problems pertaining to importing and exporting</span></td></tr>
+</table>
+
+<div class="ok"><b>번안의 선례가 있습니다.</b> 페루 번안본은 6번을 "컴퓨터 파일 관리"에서 <b>"SNS나 디지털 매체로 사업을 운영할 수 있다"</b>로 크게 바꿨습니다(TABLE 1, p. 5). 원뜻과 상당히 다릅니다. "왜 이렇게 많이 고쳤냐"는 질문에 <b>"국제 학술지에 실린 번안본도 맥락에 맞게 수정했다"</b>고 답할 수 있습니다.<br><br>
+루마니아 번안본 기준 16번 관세 문항은 <b>평균 3.594로 16문항 중 최저</b>이고 네트워크 연결도 가장 약합니다. 빼는 근거가 데이터로 있습니다.</div>
+
+<div class="use"><b>우리 연구에서</b> — 요인 2·3에서 미용샵에 맞는 것만 골라 10문항으로 재구성. 요인 1은 전부 제외. 7·11·13·16번도 제외.</div>
+
+<!-- ② 신강선·지성구 -->
+<h2 id="p2">② 신강선·지성구 (2023) — 종속변수(마케팅 성과)의 출처</h2>
+<p class="src">
+신강선, 지성구 (2023). 소상인의 디지털 마케팅 역량, 디지털 혁신과 경쟁 우위가 디지털 마케팅 성과에 미치는 영향. <i>경영컨설팅연구, 23</i>(6), 45-56.<br>
+<b>문항 위치</b> — &lt;표 2&gt; 변수의 신뢰성과 타당성, <b>p. 49</b>. 구글 드라이브 PDF 전문 확인.
+</p>
+
+<div class="card">
+  <dl class="meta">
+    <dt>표본</dt><dd>디지털 마케팅 도입 소상인 200명 (관리자급 이상, 사업주 89%)</dd>
+    <dt>조사</dt><dd>2023년 4~5월, 온라인 패널조사업체 M사</dd>
+    <dt>업종</dt><dd>음식업 45.0% · 서비스업 23.0% · 도소매업 21.0%</dd>
+    <dt>척도</dt><dd>전 변수 5점 리커트</dd>
+  </dl>
+</div>
+
+<h3>디지털 마케팅 성과 <span class="pg">표2, p.49</span> — 우리가 가져올 4문항</h3>
+<table>
+  <tr><th style="width:52px">번호</th><th>원문 그대로</th></tr>
+  <tr><td class="c">MP1</td><td>주요 경쟁업체와 비교한 시장 점유율 증가</td></tr>
+  <tr><td class="c">MP2</td><td>주요 경쟁업체와 비교한 판매 수익의 성장</td></tr>
+  <tr><td class="c">MP3</td><td>주요 경쟁업체와 비교한 신규 고객 확보</td></tr>
+  <tr><td class="c">MP4</td><td>주요 경쟁업체와 비교한 기존 고객에 대한 매출 증대</td></tr>
+</table>
+<div class="miss"><b>네 문항 모두 "주요 경쟁업체와 비교한"으로 시작합니다.</b> 루크가 만든 초안은 이걸 "작년 이맘때와 비교해서"로 바꿔 놨는데, 경쟁사 비교와 시점 비교는 다른 것을 재는 것입니다. 결정 보드의 <b>결정 3</b>이 이 문제입니다.</div>
+
+<h3>디지털 마케팅 역량 <span class="pg">표2, p.49</span></h3>
+<table>
+  <tr><th style="width:52px">번호</th><th>원문 그대로</th></tr>
+  <tr><td class="c">역량1</td><td>우리는 디지털을 활용하여 고객들과 긴밀한 관계를 유지하고 있다</td></tr>
+  <tr><td class="c">역량3</td><td>우리는 디지털마케팅을 활용하여 효율적으로 사업장을 운영한다</td></tr>
+  <tr><td class="c">역량4</td><td>우리는 디지털을 활용한 다양한 서비스를 제공한다</td></tr>
+</table>
+<div class="warn"><b>원래 4문항인데 3문항만 실려 있습니다.</b> 확인적 요인분석에서 적합지수를 저해하는 1개 문항(디지털 마케팅 역량2)을 제외했기 때문입니다(p. 50). 그래서 <b>"4문항 척도"가 아니라 "4문항 중 1개 제외, 최종 3문항"</b>이라고 적어야 정확합니다.<br><br>
+원출처는 Yam et al. (2011)입니다.</div>
+
+<h3>신뢰도 지표 <span class="pg">표2, p.49</span></h3>
+<table>
+  <tr><th>변수</th><th style="width:70px">CR</th><th style="width:70px">AVE</th></tr>
+  <tr><td>디지털 마케팅 역량</td><td>0.81</td><td>0.59</td></tr>
+  <tr><td>디지털 혁신</td><td>0.88</td><td>0.65</td></tr>
+  <tr><td>경쟁 우위</td><td>0.91</td><td>0.70</td></tr>
+  <tr><td>디지털 마케팅 성과</td><td>0.87</td><td>0.64</td></tr>
+</table>
+<div class="miss"><b>Cronbach's α가 아닙니다.</b> 이 논문은 <b>복합신뢰성(CR)</b>을 보고했고 α는 아예 싣지 않았습니다. 인용할 때 "α=0.87"이라고 쓰면 틀립니다.</div>
+
+<div class="use"><b>우리 연구에서</b> — 성과 4문항을 그대로 또는 비교 기준만 수정해서 사용. 성과 척도의 원출처는 Vorhies &amp; Morgan (2005)이며 "디지털 마케팅 활용 후 획득한 시장 효율성" 4문항을 가져온 것입니다(p. 49).</div>
+
+<!-- ③ 김도현 -->
+<h2 id="p3">③ 김도현 (2025) — 통제변수(AI 인지) 참고</h2>
+<p class="src">
+김도현 (2025). 생성형 인공지능(AI)의 이용자 신뢰 인식에 관한 연구. <i>한국콘텐츠학회논문지, 25</i>(4), 38-48.<br>
+<b>문항 위치</b> — Ⅲ. 2절 변인의 조작적 정의와 측정, <b>pp. 41-42</b>. 문항 코드와 요인적재치는 [표 1], <b>p. 43</b>. 구글 드라이브 PDF 전문 확인.
+</p>
+
+<div class="card">
+  <dl class="meta">
+    <dt>표본</dt><dd>최근 한 달 내 생성형 AI 이용 경험 10~50대 400명</dd>
+    <dt>조사</dt><dd>2023년 11월 1~6일, 마크로밀 엠브레인</dd>
+    <dt>응답자</dt><dd>여성 62.7% · 평균 34.4세 · GPT 이용 90.3%</dd>
+    <dt>척도</dt><dd>전 변수 5점 리커트 (1 전혀 아니다 ~ 5 매우 그렇다)</dd>
+    <dt>분석</dt><dd>구조방정식, R lavaan 패키지</dd>
+  </dl>
+</div>
+
+<h3>주관적 규범 <span class="pg">p.41</span> M=3.17 · SD=.51 · α=.87</h3>
+<table>
+  <tr><td class="c">1</td><td>나의 주변 사람들은 내가 생성형 AI를 이용해야 한다고 생각한다</td></tr>
+  <tr><td class="c">2</td><td>내가 좋아하는 사람들은 생성형 AI를 이미 이용하고 있거나 곧 이용할 것이다</td></tr>
+  <tr><td class="c">3</td><td>나의 친구들은 내가 생성형 AI를 이용해야 한다고 생각한다</td></tr>
+</table>
+
+<h3>인지된 유용성 <span class="pg">p.41</span> M=3.82 · SD=.71 · α=.80</h3>
+<table>
+  <tr><td class="c">1</td><td>생성형 AI를 이용하면 목적을 더 빠르게 달성할 수 있다</td></tr>
+  <tr><td class="c">2</td><td>생성형 AI를 이용하면 하려는 일을 편리하게 처리할 수 있다</td></tr>
+  <tr><td class="c">3</td><td>생성형 AI를 이용하면 하던 일을 경제적으로 처리할 수 있다</td></tr>
+</table>
+
+<h3>인지된 용이성 <span class="pg">pp.41-42</span> M=3.79 · α=.84</h3>
+<table>
+  <tr><td class="c">1</td><td>생성형 AI를 이용하는 방법을 배우는 것은 쉽다</td></tr>
+  <tr><td class="c">2</td><td>생성형 AI를 이용하는 방법은 분명하고 이해하기 쉽다</td></tr>
+  <tr><td class="c">3</td><td>어떤 일을 하면서 생성형 AI를 쉽게 이용할 수 있다</td></tr>
+</table>
+
+<h3>지속이용의도 <span class="pg">p.42</span> M=3.87 · α=.82</h3>
+<table>
+  <tr><td class="c">1</td><td>나는 향후에도 생성형 AI 이용을 고려할 것이다</td></tr>
+  <tr><td class="c">2</td><td>나는 향후에도 생성형 AI를 지속적으로 이용할 것이다</td></tr>
+  <tr><td class="c">3</td><td>나는 향후에도 생성형 AI를 적극적으로 활용할 것이다</td></tr>
+</table>
+
+<h3>신뢰 인식 <span class="pg">p.42</span> M=3.20 · SD=.96 · α=.84</h3>
+<table>
+  <tr><td class="c">1</td><td>생성형 AI는 전문적인 수준의 정보를 제공한다</td></tr>
+  <tr><td class="c">2</td><td>생성형 AI가 제공하는 정보는 정확하다</td></tr>
+  <tr><td class="c">3</td><td>생성형 AI가 제공하는 정보는 다양하다</td></tr>
+</table>
+
+<div class="warn"><b>원래는 문항이 더 많았습니다.</b> [표 1] p.43의 문항 코드를 보면 NRM2·NRM3·NRM4 / PU1·PU3·PU4 / PE1·PE2·PE3 / ICU2·ICU4·ICU5 / PT2·PT3·PT5입니다. 번호가 건너뛰는 것은 <b>확인적 요인분석에서 설명력이 떨어지는 문항을 제외</b>했기 때문입니다(p. 42). 최종 15개 관측변인이 남았습니다.</div>
+
+<div class="use"><b>우리 연구에서</b> — 통제변수 D8(AI 검색 변화 인지 여부)의 근거. 직접 가져다 쓰기보다 <b>"AI를 계속 쓸수록 신뢰가 높아진다"(지속이용의도→신뢰 인식 β=.414, p&lt;.001, 표4 p.45)</b>는 결과를 인용해 통제 필요성을 설명하는 쪽이 맞습니다.</div>
+
+<!-- ④ 박윤미·오윤경 -->
+<h2 id="p4">④ 박윤미·오윤경 (2020) — 연구대상 정의의 출처</h2>
+<p class="src">
+박윤미, 오윤경 (2020). 1인 미용기업 창업자역량이 경영성과에 미치는 영향. <i>한국인체미용예술학회지, 21</i>(4), 147-160.<br>
+구글 드라이브 PDF 전문 확인.
+</p>
+
+<div class="miss">
+<b>이 논문에는 설문 문항이 실려 있지 않습니다.</b><br><br>
+Ⅲ. 4절 측정도구(<b>p. 151</b>)에 문항 <b>수</b>만 나옵니다. 심리적 특성 13문항 · 기술적 특성 4문항 · 경영관리 능력 12문항 · 경영성과 6문항 · 인구통계 9문항, 5점 리커트. 실제 문항 텍스트는 어디에도 없습니다.<br><br>
+&lt;Table 5&gt;(<b>p. 157</b>)에 요인명만 확인됩니다 — 성취욕 / 위험감수성향 / 교육욕구 / 기술능력1~4 / 정보관리 / 자금관리 / 마케팅 / 재무적성과 / 비재무적성과.
+</div>
+
+<div class="warn"><b>문항을 보려면 이 두 편을 찾아야 합니다.</b> 참고문헌 24·25번이 문항 출처입니다.<br><br>
+· 김기철 (2016). 소규모 미용업 경영자의 심리적, 관리적 특성과 경영관리능력이 경영성과에 미치는 영향. 조선대학교 디자인대학원 <b>석사학위논문</b>, pp. 15-67.<br>
+· 김완재 (2007). 창업자 특성과 소기업 사업성과 간 관계에 관한 연구. 한밭대학교 창업경영대학원 <b>석사학위논문</b>, pp. 29-76.<br><br>
+둘 다 학위논문이라 <b>RISS에서 받아야 합니다.</b> 루크는 로그인이 안 돼서 못 봅니다.</div>
+
+<div class="card">
+  <dl class="meta">
+    <dt>표본</dt><dd>부산·경남 1인 미용기업 창업자, 300부 배포 265부 분석</dd>
+    <dt>조사</dt><dd>4월 15일~5월 10일, 직접·우편·구글 설문지 병행 (p. 151)</dd>
+    <dt>업종</dt><dd>피부미용 40.7% · 헤어 30.9% · 메이크업 14.3% · 네일 13.9%</dd>
+    <dt>신뢰도</dt><dd>심리적 특성 α=.883 · 기술적 특성 .927 · 경영관리 능력 .872 · 경영성과 .921 (p. 156)</dd>
+  </dl>
+</div>
+
+<div class="use"><b>우리 연구에서</b> — 문항이 아니라 <b>1인 미용기업의 정의</b>(p. 149)와 <b>연령별 마케팅 역량 차이</b>(30대 4.06 최고, 50대 이상 3.45 최저, Table 2 pp. 152-153)를 씁니다. 후자가 연령을 통제변수로 넣는 근거입니다.</div>
+
+<!-- ⑤ 안용길 -->
+<h2 id="p5">⑤ 안용길 (2026) — 매개변수 항목 구성의 근거</h2>
+<p class="src">
+안용길 (2026). 디지털 플랫폼의 소상공인 지원 서비스에 관한 실증 연구. <i>벤처창업연구, 21</i>(2), 123-134.<br>
+구글 드라이브 PDF 전문 확인.
+</p>
+
+<div class="miss">
+<b>리커트 설문이 아닙니다.</b> 조건부가치측정법(CVM)을 쓴 연구라 문항 형식이 완전히 다릅니다. "특정 서비스가 중단된다면 얼마를 보상받아야 하는가"를 묻는 <b>수용의사액(WTA)</b> 질문입니다. 우리 설문에 옮겨 쓸 문항이 없습니다.
+</div>
+
+<div class="card">
+  <dl class="meta">
+    <dt>조사</dt><dd>2025년 8월 27일~9월 11일, 네이버 리서치 패널 (p. 128)</dd>
+    <dt>방법</dt><dd>단일이진선택형(SBDC), 플랫폼 고유성 지수(PUI)</dd>
+    <dt>대상</dt><dd>네이버 스마트스토어·플레이스·광고 이용 소상공인</dd>
+  </dl>
+</div>
+
+<h3>플레이스 서비스 영역 <span class="pg">표2, p.129</span> — 여기서 가져온 것</h3>
+<table>
+  <tr><th>서비스</th><th style="width:130px">연간 WTA 중간값</th><th style="width:70px">PUI</th></tr>
+  <tr><td>지도·길찾기</td><td>344,077,997원</td><td>0.9308</td></tr>
+  <tr><td>온라인 예약</td><td>70,523,520원</td><td>—</td></tr>
+  <tr><td>리뷰 노출</td><td>66,228,070원</td><td>0.9326</td></tr>
+</table>
+
+<div class="warn"><b>3,257명은 이 논문의 수치가 아닙니다.</b> 네이버 공식 보도자료에만 있습니다. 논문 &lt;표 1&gt;(p. 129)에는 관측치 빈도만 있고 전체 표본 수는 명시되지 않았습니다.</div>
+
+<div class="use"><b>우리 연구에서</b> — 플랫폼 활용 행동 문항의 <b>영역 구분</b>(검색 노출 / 지도·길찾기 / 리뷰 / 온라인 예약)을 가져왔습니다. 그리고 한계 절(p. 132)의 "업종별 특성에 따라 의존 구조가 달라질 가능성을 충분히 반영하지 못하였다"가 우리 연구의 자리입니다.</div>
+
+<!-- 정리 -->
+<h2 id="sum">정리</h2>
+<table>
+  <tr><th>논문</th><th style="width:90px">문항 확보</th><th>우리 설문에 쓰는 것</th></tr>
+  <tr><td>① Wang 외 (2020) IESES</td><td style="color:var(--green);font-weight:700">16문항 전부</td><td>독립변수 10문항의 원천</td></tr>
+  <tr><td>② 신강선·지성구 (2023)</td><td style="color:var(--green);font-weight:700">성과 4문항<br>역량 3문항</td><td>종속변수 4문항 그대로</td></tr>
+  <tr><td>③ 김도현 (2025)</td><td style="color:var(--green);font-weight:700">15문항 전부</td><td>통제변수 근거</td></tr>
+  <tr><td>④ 박윤미·오윤경 (2020)</td><td style="color:var(--red);font-weight:700">없음</td><td>연구대상 정의 · 연령 통제 근거</td></tr>
+  <tr><td>⑤ 안용길 (2026)</td><td style="color:var(--red);font-weight:700">해당 없음</td><td>매개변수 영역 구분</td></tr>
+</table>
+
+<div class="warn">
+<b>지영이가 확인해야 할 것.</b> ④의 문항 원문을 보려면 김기철(2016)과 김완재(2007) 석사학위논문을 RISS에서 받아야 합니다. 다만 우리 연구는 이 논문에서 <b>문항이 아니라 정의와 통계 결과</b>만 가져오므로, 급한 일은 아닙니다.
+</div>
+
+</div>
+
+<footer>
+  1번 주제 참고논문 설문 문항 모음 · 2026년 9월 17일 확인<br>
+  <a href="./">← 결정 보드로</a>
+</footer>
+
+</body>
+</html>
