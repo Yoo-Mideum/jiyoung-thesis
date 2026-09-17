@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>지영 논문 결정 보드</title>
+<meta name="description" content="설문 문항 선택과 진행 상황">
+<style>
+:root{
+  --navy:#1f3a5f; --gold:#b8860b; --green:#2f6b4f;
+  --bg:#f7f8fa; --card:#fff; --ink:#1f2328; --mute:#6a737d;
+  --line:#e1e6ec; --soft:#f0f3f7; --pick:#eef5ef; --pickline:#2f6b4f;
+  --shadow:0 1px 3px rgba(20,30,50,.06);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --navy:#8ab4e8; --gold:#e0b050; --green:#6fbf8f;
+    --bg:#15181d; --card:#1e222a; --ink:#e6eaf0; --mute:#98a2b0;
+    --line:#2f3641; --soft:#252b34; --pick:#1e3328; --pickline:#6fbf8f;
+    --shadow:0 1px 3px rgba(0,0,0,.3);
+  }
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+  font-size:15px;line-height:1.7;word-break:keep-all;-webkit-text-size-adjust:100%;}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px 100px;}
+header{background:#1f3a5f;color:#fff;padding:30px 16px 26px;margin-bottom:22px;}
+@media (prefers-color-scheme:dark){header{background:#1a2b42;}}
+header .in{max-width:720px;margin:0 auto;}
+header .k{font-size:11px;letter-spacing:.2em;color:#d4b878;font-weight:700;margin-bottom:8px;}
+header h1{font-size:23px;font-weight:800;margin:0 0 9px;line-height:1.35;color:#fff;}
+header p{font-size:13.5px;color:#c3d2e4;margin:0;line-height:1.65;}
+.dday{display:inline-block;background:rgba(255,255,255,.14);border-radius:6px;padding:5px 11px;font-size:12.5px;font-weight:700;margin-top:13px;color:#fff;}
+.bar{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:13px;color:var(--mute);margin-bottom:22px;line-height:1.6;}
+.bar b{color:var(--ink);}
+h2{font-size:15px;font-weight:800;color:var(--navy);margin:32px 0 12px;padding-bottom:7px;border-bottom:2px solid var(--navy);}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:16px;box-shadow:var(--shadow);}
+.no{display:inline-block;background:var(--navy);color:var(--card);font-size:11px;font-weight:800;border-radius:5px;padding:3px 8px;margin-bottom:9px;letter-spacing:.04em;}
+.card h3{font-size:16.5px;font-weight:800;margin:0 0 6px;line-height:1.45;}
+.why{font-size:13.5px;color:var(--mute);margin:0 0 14px;line-height:1.68;}
+.why b{color:var(--ink);}
+.opt{border:1.5px solid var(--line);border-radius:10px;padding:13px 14px;margin-bottom:9px;cursor:pointer;background:var(--card);transition:border-color .12s,background .12s;}
+.opt.on{border-color:var(--pickline);background:var(--pick);border-width:2px;}
+.opt .t{font-weight:700;font-size:14.5px;display:flex;align-items:center;gap:7px;flex-wrap:wrap;line-height:1.45;}
+.rec{background:var(--gold);color:#fff;font-size:10.5px;font-weight:800;border-radius:4px;padding:2px 6px;}
+.opt .d{font-size:13px;color:var(--mute);margin-top:5px;line-height:1.6;}
+.ex{font-size:12.5px;color:var(--mute);margin-top:8px;padding:9px 11px;background:var(--soft);border-radius:7px;line-height:1.75;white-space:pre-line;}
+.pros{font-size:12.5px;margin-top:7px;line-height:1.6;}
+.pros .p{color:var(--green);} .pros .m{color:var(--gold);}
+textarea{width:100%;border:1.5px solid var(--line);border-radius:9px;padding:12px;font-family:inherit;font-size:14px;line-height:1.65;background:var(--card);color:var(--ink);resize:vertical;min-height:88px;}
+textarea:focus{outline:none;border-color:var(--navy);}
+.btn{background:var(--navy);color:var(--card);border:none;border-radius:9px;padding:12px 20px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;}
+.btn.sec{background:transparent;color:var(--navy);border:1.5px solid var(--navy);}
+.btn:active{opacity:.85;}
+.chk{display:flex;align-items:flex-start;gap:11px;padding:11px 0;border-bottom:1px solid var(--line);cursor:pointer;}
+.chk:last-child{border-bottom:none;}
+.chk .b{width:21px;height:21px;min-width:21px;border:1.8px solid var(--navy);border-radius:5px;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff;font-weight:800;}
+.chk.on .b{background:var(--green);border-color:var(--green);}
+.chk .tx{font-size:14px;line-height:1.55;}
+.chk.on .tx{color:var(--mute);text-decoration:line-through;}
+.chk .sub{font-size:12.5px;color:var(--mute);display:block;margin-top:2px;text-decoration:none;}
+.note{background:#fdf6e8;border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:12px 14px;font-size:13px;line-height:1.68;margin:14px 0;}
+@media (prefers-color-scheme:dark){.note{background:#2b2418;}}
+.note b{color:var(--gold);}
+.send{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);padding:11px 16px;box-shadow:0 -2px 12px rgba(0,0,0,.07);}
+.send .in{max-width:720px;margin:0 auto;display:flex;gap:9px;align-items:center;}
+.send .st{flex:1;font-size:12.5px;color:var(--mute);line-height:1.45;}
+#out{white-space:pre-wrap;font-size:12.5px;background:var(--soft);border-radius:9px;padding:13px;margin-top:11px;line-height:1.75;display:none;}
+#out.show{display:block;}
+footer{text-align:center;font-size:12px;color:var(--mute);padding:26px 16px;line-height:1.7;}
+</style>
+</head>
+<body>
+
+<header><div class="in">
+  <div class="k">석사 학술지 논문 · 결정 보드</div>
+  <h1>골라 주시면<br>다음 단계로 갑니다</h1>
+  <p>루크가 정리한 선택지입니다. 고르시고 맨 아래에서<br>결과를 복사해 카톡으로 보내 주세요.</p>
+  <div class="dday" id="dday">9월 26일 제출</div>
+</div></header>
+
+<div class="wrap">
+
+  <div class="bar" id="bar">아직 고른 게 없습니다</div>
+
+  <h2>먼저 — 왜 고쳐야 하나</h2>
+  <div class="card">
+    <p class="why" style="margin:0">지금 설문 초안에는 <b>독립변수(자기효능감)와 매개변수(플랫폼 활용 행동)가 같은 것을 묻는</b> 문제가 있습니다. "사진을 올릴 수 있다"와 "사진을 올린다"처럼요.<br><br>
+    이대로 조사하면 두 변수의 상관이 인위적으로 높게 나옵니다. 결과는 예쁘게 나오는데 <b>"같은 걸 두 번 잰 것 아니냐"</b>는 지적에 방어가 안 됩니다. 데이터를 받은 뒤에는 되돌릴 수 없어서 26일 전에 고쳐야 합니다.</p>
+  </div>
+
+  <h2>결정 1 · 자기효능감 문항</h2>
+  <div class="card">
+    <span class="no">가장 중요</span>
+    <h3>10문항을 어떤 방향으로 다시 쓸까요</h3>
+    <p class="why">행동 문항과 겹치지 않게 바꿔야 합니다. 세 방향이 있습니다.</p>
+    <div class="opt" data-k="d1" data-v="안 1 원척도 충실형">
+      <div class="t">안 1 · 원척도 충실형</div>
+      <div class="d">IESES 원문 표현을 최대한 살리고 미용샵 맥락만 바꿉니다.</div>
+      <div class="ex">나는 온라인에서 우리 가게를 운영하는 데 필요한 도구를 다룰 수 있다
+나는 우리 가게에 맞는 온라인 홍보 전략을 세울 수 있다
+나는 온라인 홍보가 수익으로 이어지는 방법을 찾을 수 있다</div>
+      <div class="pros"><span class="p">◎ 출처가 가장 명확합니다. 문항 번호까지 댈 수 있어요</span><br><span class="m">△ 행동 문항과 일부 여전히 겹칩니다</span></div>
+    </div>
+    <div class="opt" data-k="d1" data-v="안 2 난이도·확신형">
+      <div class="t">안 2 · 난이도·확신 강도형 <span class="rec">루크 추천</span></div>
+      <div class="d">과업 목록이 아니라 어려움 앞에서의 확신을 묻습니다. Bandura의 원래 설계 원칙입니다.</div>
+      <div class="ex">온라인 홍보 방식이 바뀌어도 나는 따라갈 수 있다
+도와주는 사람이 없어도 혼자 해낼 수 있다
+고객이 어떤 말로 검색할지 짐작할 수 있다
+우리 가게에 맞는 방법과 안 맞는 방법을 구분할 수 있다</div>
+      <div class="pros"><span class="p">◎ 행동 문항과 겹치는 게 하나도 없습니다</span><br><span class="m">△ "그럼 IESES를 쓴 게 맞냐"는 질문이 나올 수 있어요</span></div>
+    </div>
+    <div class="opt" data-k="d1" data-v="안 3 영역 확신형">
+      <div class="t">안 3 · 영역 확신형</div>
+      <div class="d">"~에 자신이 있다" 형식으로 통일합니다.</div>
+      <div class="ex">나는 플레이스 기능을 다루는 데 자신이 있다
+나는 고객이 반응할 만한 내용을 고르는 데 자신이 있다
+나는 온라인으로 새 고객을 만드는 데 자신이 있다</div>
+      <div class="pros"><span class="p">◎ 사장님들이 가장 답하기 쉽습니다</span><br><span class="m">△ 문항이 비슷해서 요인이 두 덩어리로 안 갈릴 수 있어요</span></div>
+    </div>
+  </div>
+
+  <h2>결정 2 · AI 대응 행동</h2>
+  <div class="card">
+    <span class="no">차별점</span>
+    <h3>7문항 중 몇 개를 남길까요</h3>
+    <p class="why">지금 7개 중 3개는 <b>AI 이전에도 하던 일</b>입니다. AI 검색환경이 연구배경으로 빠진 지금, <b>이 문항들이 연구의 유일한 차별점</b>입니다.</p>
+    <div class="opt" data-k="d2" data-v="4문항 압축">
+      <div class="t">4문항으로 압축 <span class="rec">루크 추천</span></div>
+      <div class="d">AI가 글을 읽는다는 전제 없이는 할 이유가 없는 행동만 남깁니다. 총 문항 수는 14개 그대로입니다.</div>
+      <div class="ex">소개글을 단어 나열이 아니라 문장으로 자세히 쓴다
+어떤 손님에게 어떤 시술이 맞는지 설명하는 글을 올린다
+자주 묻는 질문과 답을 글로 정리해 올린다
+우리 가게가 검색 결과에 어떻게 나오는지 직접 검색해 확인한다</div>
+      <div class="pros"><span class="p">◎ 넷 다 한 문장으로 설명됩니다</span></div>
+    </div>
+    <div class="opt" data-k="d2" data-v="7문항 유지">
+      <div class="t">7문항 그대로</div>
+      <div class="d">시술명·가격 명시, 사진 설명, 리뷰 유도까지 포함합니다.</div>
+      <div class="pros"><span class="p">◎ 측정 범위가 넓습니다</span><br><span class="m">△ 3개는 AI 대응이라 보기 어렵습니다</span></div>
+    </div>
+    <div class="opt" data-k="d2" data-v="두 층 구분 없앰">
+      <div class="t">두 층 구분을 없앤다</div>
+      <div class="d">기본/AI 구분 없이 14문항 단일 차원으로 갑니다.</div>
+      <div class="pros"><span class="p">◎ 구조가 단순해집니다</span><br><span class="m">△ AI가 연구에서 사실상 사라집니다</span></div>
+    </div>
+  </div>
+
+  <h2>결정 3 · 마케팅 성과 비교 기준</h2>
+  <div class="card">
+    <span class="no">원척도 확인</span>
+    <h3>무엇과 비교해서 물을까요</h3>
+    <p class="why">원척도(신강선·지성구, 2023, 표2, 49쪽) 4문항은 <b>모두 "주요 경쟁업체와 비교한"</b>으로 시작합니다. 루크 초안은 "작년 이맘때와 비교해서"로 바꿔 놨는데, 다른 것을 재는 겁니다.</p>
+    <div class="opt" data-k="d3" data-v="경쟁사 비교(원척도)">
+      <div class="t">원척도대로 · 경쟁사 비교</div>
+      <div class="d">"주요 경쟁업체와 비교해서 신규 고객이 늘었다"</div>
+      <div class="pros"><span class="p">◎ 원척도를 그대로 썼다고 말할 수 있습니다</span><br><span class="m">△ 1인샵이 "경쟁업체"를 어떻게 잡을지 모호합니다</span></div>
+    </div>
+    <div class="opt" data-k="d3" data-v="시점 비교로 수정">
+      <div class="t">시점 비교로 수정 <span class="rec">루크 추천</span></div>
+      <div class="d">"작년 이맘때와 비교해서" · 수정했음을 논문에 명시합니다.</div>
+      <div class="pros"><span class="p">◎ 답하기 쉽고 기준이 분명합니다</span><br><span class="m">△ 원척도와 다른 것을 잽니다</span></div>
+    </div>
+    <div class="opt" data-k="d3" data-v="둘 다 측정">
+      <div class="t">둘 다 물어본다</div>
+      <div class="d">4문항이 8문항이 됩니다. (37→41문항)</div>
+    </div>
+  </div>
+
+  <h2>결정 4 · 리커트 척도 점수</h2>
+  <div class="card">
+    <h3>5점과 7점이 섞입니다</h3>
+    <p class="why">IESES 원척도는 <b>7점</b>, 종속변수로 쓸 신강선·지성구(2023)는 <b>5점</b>입니다.</p>
+    <div class="opt" data-k="d4" data-v="5점 통일">
+      <div class="t">전부 5점으로 통일 <span class="rec">루크 추천</span></div>
+      <div class="d">국내 미용 분야 논문이 대부분 5점입니다. 응답 부담도 적습니다.</div>
+    </div>
+    <div class="opt" data-k="d4" data-v="7점 통일">
+      <div class="t">전부 7점으로 통일</div>
+      <div class="d">IESES 원척도에 맞춥니다. 분산이 커지는 이점이 있습니다.</div>
+    </div>
+    <div class="opt" data-k="d4" data-v="원척도 각각">
+      <div class="t">각 원척도를 따른다</div>
+      <div class="d">효능감 7점, 성과 5점. 충실도는 높지만 응답자가 헷갈립니다.</div>
+    </div>
+  </div>
+
+  <h2>결정 5 · 행동 응답 형식</h2>
+  <div class="card">
+    <h3>플랫폼 활용 행동을 어떻게 물을까요</h3>
+    <div class="opt" data-k="d5" data-v="빈도 5점">
+      <div class="t">빈도 5점 <span class="rec">루크 추천</span></div>
+      <div class="d">전혀 안 한다(1) ~ 항상 한다(5). 회귀분석에 유리합니다.</div>
+    </div>
+    <div class="opt" data-k="d5" data-v="실행 여부 2점">
+      <div class="t">실행 여부 2점</div>
+      <div class="d">한다 / 안 한다. 명확하지만 분석이 제한됩니다.</div>
+    </div>
+  </div>
+
+  <h2>결정 6 · 주당 마케팅 투입 시간</h2>
+  <div class="card">
+    <h3>이 문항을 어떻게 할까요</h3>
+    <p class="why">통제변수로 넣으려 했는데 <b>근거가 될 선행연구를 찾지 못했습니다.</b> 근거 없는 통제변수는 심사에서 지적받습니다.</p>
+    <div class="opt" data-k="d6" data-v="기초 정보로 강등">
+      <div class="t">기초 정보로만 남긴다 <span class="rec">루크 추천</span></div>
+      <div class="d">통제변수에서 빼고 인구통계 문항으로만 둡니다.</div>
+    </div>
+    <div class="opt" data-k="d6" data-v="통제변수 유지">
+      <div class="t">통제변수로 유지한다</div>
+      <div class="d">근거 논문을 더 찾아보고, 못 찾으면 그때 뺍니다.</div>
+    </div>
+    <div class="opt" data-k="d6" data-v="삭제">
+      <div class="t">아예 뺀다</div>
+      <div class="d">문항 수를 줄입니다.</div>
+    </div>
+  </div>
+
+  <h2>RISS 검색 결과</h2>
+  <div class="card">
+    <h3>IESES 한국어 번안본을 찾으셨나요</h3>
+    <p class="why">루크는 로그인이 필요해서 못 봅니다. 학위논문에 있으면 <b>번안 작업이 통째로 사라집니다.</b><br><br>검색어 — 인터넷 창업 자기효능감 / 디지털 자기효능감 / 온라인 창업 자기효능감 / 소상공인 자기효능감 / IESES / 창업자 자기효능감 척도</p>
+    <div class="opt" data-k="riss" data-v="찾음"><div class="t">찾았습니다</div><div class="d">아래에 논문 제목을 적어 주세요.</div></div>
+    <div class="opt" data-k="riss" data-v="없음"><div class="t">없었습니다</div><div class="d">직접 번안하는 방향으로 갑니다.</div></div>
+    <div class="opt" data-k="riss" data-v="아직"><div class="t">아직 안 해봤습니다</div></div>
+    <textarea id="memo" placeholder="찾은 논문 제목이나 검색하면서 느낀 점" style="margin-top:12px"></textarea>
+  </div>
+
+  <h2>진행 체크</h2>
+  <div class="card" id="chks"></div>
+
+  <h2>질문 남기기</h2>
+  <div class="card">
+    <p class="why">막히는 부분이나 궁금한 걸 적어 주세요. 아래 결과에 함께 담깁니다.</p>
+    <textarea id="qs" placeholder="예) 안 2로 가면 IESES를 썼다고 말해도 되나요?"></textarea>
+  </div>
+
+  <div class="note">
+    <b>고르신 건 이 기기에 자동 저장됩니다.</b> 창을 닫았다 다시 열어도 그대로 있어요.<br>
+    다 고르셨으면 아래 <b>결과 복사</b>를 누르고 카톡에 붙여넣어 보내 주세요.
+  </div>
+
+  <div id="out"></div>
+</div>
+
+<div class="send"><div class="in">
+  <div class="st" id="st">0 / 6 선택</div>
+  <button class="btn sec" id="show">결과 보기</button>
+  <button class="btn" id="copy">결과 복사</button>
+</div></div>
+
+<footer>지영 논문 결정 보드 · 9월 26일 과제<br>황선희 교수님 지도</footer>
+
+<script>
+(function(){
+  var LS="jiyoung-thesis-v1";
+  var LABEL={d1:"자기효능감 문항",d2:"AI 대응 행동",d3:"성과 비교 기준",d4:"리커트 점수",d5:"행동 응답 형식",d6:"마케팅 투입 시간",riss:"RISS 검색"};
+  var ORDER=["d1","d2","d3","d4","d5","d6"];
+  var CHK=[
+    ["c1","페루 논문 PDF 받아두기","무료 · frontiersin.org 10.3389/feduc.2024.1370490"],
+    ["c2","신강선·지성구 논문 49쪽 표2 확인","드라이브에 이미 있음 · 5분"],
+    ["c3","RISS 한국어 번안본 검색","위에 결과 기록"],
+    ["c4","교수님께 중간 확인 카톡","9월 22일 월요일"],
+    ["c5","수정된 문항으로 제출 문서 정리","9월 25일까지"],
+    ["c6","제출","9월 26일 토요일"]
+  ];
+  var S={pick:{},chk:{},memo:"",qs:""};
+
+  function $(s){return document.querySelector(s);}
+  function $$(s){return [].slice.call(document.querySelectorAll(s));}
+  function load(){try{var r=localStorage.getItem(LS);if(r){var o=JSON.parse(r);S.pick=o.pick||{};S.chk=o.chk||{};S.memo=o.memo||"";S.qs=o.qs||"";}}catch(e){}}
+  function save(){try{localStorage.setItem(LS,JSON.stringify(S));}catch(e){}}
+
+  try{
+    var due=new Date(2026,8,26),now=new Date();
+    var d=Math.ceil((due.setHours(23,59,59)-now)/86400000);
+    $("#dday").textContent = d>1?("9월 26일 제출 · D-"+d) : d===1?"9월 26일 제출 · 내일":d===0?"오늘이 제출일입니다":"9월 26일 제출";
+  }catch(e){}
+
+  function renderChk(){
+    $("#chks").innerHTML = CHK.map(function(c){
+      return '<div class="chk'+(S.chk[c[0]]?" on":"")+'" data-c="'+c[0]+'"><div class="b">'+(S.chk[c[0]]?"✓":"")+
+        '</div><div class="tx">'+c[1]+'<span class="sub">'+c[2]+'</span></div></div>';
+    }).join("");
+    $$("[data-c]").forEach(function(el){
+      el.onclick=function(){var k=el.getAttribute("data-c");S.chk[k]=!S.chk[k];save();renderChk();};
+    });
+  }
+  function renderPick(){
+    $$(".opt").forEach(function(el){
+      var k=el.getAttribute("data-k"),v=el.getAttribute("data-v");
+      el.classList.toggle("on", S.pick[k]===v);
+    });
+    var n=ORDER.filter(function(k){return S.pick[k];}).length;
+    $("#st").textContent=n+" / 6 선택"+(n===6?" · 완료":"");
+    $("#bar").innerHTML = n===0 ? "아직 고른 게 없습니다"
+      : "결정 <b>"+n+" / 6</b> 완료"+(S.pick.riss?" · RISS <b>"+S.pick.riss+"</b>":"")+(n===6?" — 아래에서 결과를 복사해 보내 주세요":"");
+  }
+  function build(){
+    var L=["[지영 논문 결정 · "+(new Date().getMonth()+1)+"/"+new Date().getDate()+"]",""];
+    ORDER.forEach(function(k,i){ L.push((i+1)+". "+LABEL[k]+" = "+(S.pick[k]||"미선택")); });
+    L.push("");
+    L.push("RISS 검색 = "+(S.pick.riss||"미선택"));
+    if(S.memo.trim()) L.push("RISS 메모: "+S.memo.trim());
+    var done=CHK.filter(function(c){return S.chk[c[0]];});
+    L.push("");
+    L.push("진행 "+done.length+"/6"+(done.length?" — "+done.map(function(c){return c[1];}).join(", "):""));
+    if(S.qs.trim()){ L.push(""); L.push("질문: "+S.qs.trim()); }
+    return L.join("\n");
+  }
+
+  load(); renderChk(); renderPick();
+  $("#memo").value=S.memo; $("#qs").value=S.qs;
+
+  $$(".opt").forEach(function(el){
+    el.onclick=function(){
+      var k=el.getAttribute("data-k");
+      S.pick[k]= S.pick[k]===el.getAttribute("data-v") ? "" : el.getAttribute("data-v");
+      save(); renderPick();
+    };
+  });
+  $("#memo").oninput=function(){S.memo=this.value;save();};
+  $("#qs").oninput=function(){S.qs=this.value;save();};
+  $("#show").onclick=function(){
+    var o=$("#out"); o.textContent=build(); o.classList.add("show");
+    o.scrollIntoView({behavior:"smooth",block:"center"});
+  };
+  $("#copy").onclick=function(){
+    var t=build(), b=$("#copy");
+    function ok(){b.textContent="복사됐어요";setTimeout(function(){b.textContent="결과 복사";},2000);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok).catch(fallback);
+    } else fallback();
+    function fallback(){
+      var ta=document.createElement("textarea");ta.value=t;ta.style.position="fixed";ta.style.opacity="0";
+      document.body.appendChild(ta);ta.select();
+      try{document.execCommand("copy");ok();}catch(e){
+        $("#out").textContent=t;$("#out").classList.add("show");
+        b.textContent="아래를 복사하세요";
+      }
+      document.body.removeChild(ta);
+    }
+  };
+})();
+</script>
+</body>
+</html>
